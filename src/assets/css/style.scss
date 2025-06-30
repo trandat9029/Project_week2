@@ -1,7 +1,78 @@
+/*====== root =====*/ 
 :root{
-    --text-heading: Lora san-serif,
+    --text-heading: "Lora", sans-serif;
     --color-desc: #00000060;
     --color-text: #000;
     --color-title: #fff;
+    --bg-body: #fff;
+    --bg-header: #000;
 
 }
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+
+
+}
+
+
+/*====== header =====*/ 
+.header{
+    width: 100%;
+    width: auto;
+    box-sizing: border-box;
+
+
+    &__infos{
+        height: 3.4rem;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-title);
+        background-color: var(--bg-header);
+
+        &__phone{
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+        
+        }
+        &__address{
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+         }
+    }
+
+    &__logo{
+        width: 100%;
+        height: 3.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--text-heading);
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        margin: 0 auto;
+        background-color: var(--color-title);
+        color: var(--color-text);
+    }
+}
+
+
+
+
+
+
+
+
+

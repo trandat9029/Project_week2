@@ -1,3 +1,8 @@
-
+:root {
+  --text-heading: Lora san-serif,
+  --color-desc: #00000060;
+  --color-text: #000;
+  --color-title: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */

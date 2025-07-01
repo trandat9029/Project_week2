@@ -6,6 +6,9 @@
   --color-title: #fff;
   --bg-body: #fff;
   --bg-header: #000;
+  --bg-selling-desc:#054E4A;
+  --bg-selling-title:#000;
+  --bg-sale:#A42003;
 }
 
 html {
@@ -232,6 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  position: relative;
 }
 .main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-thumbnail img {
   object-fit: cover;
@@ -251,6 +255,40 @@ body {
   font-size: 1.6rem;
   line-height: 2.3rem;
   font-weight: 400;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__selling {
+  top: 1.2rem;
+  left: 1.2rem;
+  position: absolute;
+  color: var(--color-title);
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__selling-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  background-color: var(--bg-selling-title);
+  padding: 0.3rem 0.9rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__selling-desc {
+  width: 30%;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  background-color: var(--bg-selling-desc);
+  padding: 0.3rem 0.9rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-sale {
+  box-sizing: border-box;
+  position: absolute;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.2rem;
+  left: 1.2rem;
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+  color: var(--color-title);
+  background-color: var(--bg-sale);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -70,6 +70,7 @@ body {
   background-color: var(--bg-body);
   color: var(--color-text);
   /*===== hero-banner ====*/
+  /*====== tabs ====*/
 }
 .main .hero-banner {
   width: 100%;
@@ -134,6 +135,122 @@ body {
   border-radius: 4rem;
   transform: translate(0%, 25%);
   background-color: var(--bg-body);
+}
+.main .tabs {
+  width: 100%;
+  height: 100%;
+}
+.main .tabs .container {
+  padding: 10rem 25.5rem 0 25.5rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /*====== header ======*/
+  /*======= warp =====*/
+}
+.main .tabs .container .tabs__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .tabs .container .tabs__header .tabs__heading {
+  font-family: var(--text-heading);
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+}
+.main .tabs .container .tabs__header .tabs__nav {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+.main .tabs .container .tabs__header .tabs__nav .tabs__nav-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  padding-bottom: 0.4rem;
+}
+.main .tabs .container .tabs__header .tabs__nav .tabs__nav-item.active p {
+  height: 0.01rem;
+  background-color: #000;
+}
+.main .tabs .container .tabs__wrap {
+  width: 100%;
+  height: auto;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-item .tabs__product-thumbnail img {
+  object-fit: cover;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-item .tabs__product-content .tabs__product-category {
+  height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: var(--color-desc);
+  text-transform: uppercase;
+  transform: translate(0%, -24%);
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-item .tabs__product-content .tabs__product-name {
+  height: 2.6rem;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-item .tabs__product-content .tabs__product-price {
+  height: 2.5rem;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-thumbnail img {
+  object-fit: cover;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-category {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: var(--color-desc);
+  text-transform: uppercase;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-name {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-price {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

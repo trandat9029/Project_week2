@@ -18,7 +18,7 @@ body{
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-
+    overflow-x: hidden;
 
 }
 
@@ -31,7 +31,7 @@ body{
 
 
     &__infos{
-        height: 3.4rem;
+        height: 3.8rem;
         padding: 0 1rem;
         display: flex;
         justify-content: space-between;
@@ -39,17 +39,18 @@ body{
         color: var(--color-title);
         background-color: var(--bg-header);
 
-        &__phone{
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 2.4rem;
+    }
+    &__phone{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.4rem;
         
-        }
-        &__address{
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 2.4rem;
-         }
+    }
+
+    &__address{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.4rem;
     }
 
     &__logo{
@@ -62,9 +63,12 @@ body{
         font-size: 3.2rem;
         font-weight: 500;
         line-height: 2.4rem;
-        margin: 0 auto;
         background-color: var(--color-title);
         color: var(--color-text);
+        text-transform: uppercase;
+    }
+    &__button{
+        display: none;
     }
 }
 

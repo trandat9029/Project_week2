@@ -72,6 +72,89 @@ body{
     }
 }
 
+/*=======main  ======*/ 
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-body);
+    color: var(--color-text);
+
+    /*===== hero-banner ====*/ 
+    .hero-banner{
+        width: 100%;
+        position: relative;
+        font-weight: 400;
+        color: var(--color-title);
+
+        .container{
+            width: 100%;
+            height: 100%;
+
+            .hero-banner__background{
+                width: 100%;
+                height: 100%;
+
+                &-img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .hero-banner__content{
+                box-sizing: border-box;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-49%, -46%);
+                width: 35rem;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                
+
+                .hero-banner__heading{
+                    font-family: var(--text-heading);
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+
+                    span{
+                        margin-left: 5rem;
+
+                    }
+
+                }
+                .hero-banner__desc{
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                    transform: translate(3%, -20%);
+
+                }
+                .hero-banner__link{
+                    height: auto;
+                    transform: translate(-1%, -15%);
+
+                    &-text{
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                        text-transform: uppercase;
+                    }
+                    &-underline{
+                        width: 11rem;
+                        height: 0.01rem;
+                        border-radius: 4rem;
+                        transform: translate(0%, 25%);
+                        background-color: var(--bg-body);
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

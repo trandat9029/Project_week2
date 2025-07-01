@@ -4,9 +4,9 @@
     --color-desc: #00000060;
     --color-text: #000;
     --color-title: #fff;
+    --color-scrolling: #b3aeae;
     --bg-body: #fff;
     --bg-header: #000;
-
     --bg-selling-desc:#054E4A;
     --bg-selling-title:#000;
     --bg-sale:#A42003;
@@ -425,6 +425,34 @@ body{
                             padding: 0.3rem 0.9rem;
                         }
                     }
+                }
+            }
+        }
+    } 
+
+    /*======= scrolling =====*/
+    .scrolling{
+        width: 100%;
+        .container{
+            width: 100%;
+
+            .scrolling__promotion{
+                width: 100%;
+                padding: 9rem 0;
+                display: flex;
+                align-items: center;
+                gap: 2.4rem;
+
+                .scroll__promotion-text{
+                    font-family: var(--text-heading);
+                    font-size: 7.4rem;
+                    font-weight: 400;
+                    line-height: 9rem;
+                    color: var(--color-scrolling);
+                }
+
+                .scroll__promotion-icon img{
+                    width: 100%;
                 }
             }
         }

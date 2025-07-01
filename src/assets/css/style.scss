@@ -6,8 +6,10 @@
     --color-title: #fff;
     --bg-body: #fff;
     --bg-header: #000;
-    --bg-selling-title: #000;
-    --bg-selling-desc: #054E4A;
+
+    --bg-selling-desc:#054E4A;
+    --bg-selling-title:#000;
+    --bg-sale:#A42003;
 
 }
 
@@ -270,6 +272,7 @@ body{
                                 display: flex;
                                 flex-direction: column;
                                 gap: 1.6rem;
+                                position: relative;
 
                                 .tabs__product-thumbnail img{
                                     object-fit: cover;
@@ -295,6 +298,43 @@ body{
                                         font-weight: 400;
 
                                     }
+                                }
+
+                                .tabs__selling{
+                                    top: 1.2rem;
+                                    left: 1.2rem;
+                                    position: absolute;
+                                    color: var(--color-title);
+
+                                    &-title{
+                                        font-weight: 700;
+                                        font-size: 1.4rem;
+                                        line-height: 1.8rem;
+                                        background-color: var(--bg-selling-title);  
+                                        padding: 0.3rem 0.9rem;                                      
+                                    }
+                                    &-desc{
+                                        width: 30%;
+                                        font-weight: 700;
+                                        font-size: 1.4rem;
+                                        line-height: 1.8rem;
+                                        background-color: var(--bg-selling-desc); 
+                                        padding: 0.3rem 0.9rem; 
+                                    }
+                                }
+                                .tabs__product-sale{
+                                    box-sizing: border-box;
+                                    position: absolute;
+                                    height: 4rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    top: 1.2rem;
+                                    left: 1.2rem;
+                                    padding: 0.3rem 0.3rem 0.3rem 1rem;
+                                    color: var(--color-title);
+                                    background-color: var(--bg-sale);
+
                                 }
                             }
                         }

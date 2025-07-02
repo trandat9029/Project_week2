@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*====== root =====*/
 :root {
   --text-heading: "Lora", sans-serif;
@@ -26,6 +27,14 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /*====== header =====*/
 .header {
   width: 100%;
@@ -390,21 +399,26 @@ body {
   width: 100%;
 }
 .main .scrolling .container .scrolling__promotion {
-  width: 100%;
-  padding: 9rem 0;
+  padding: 10rem 0;
   display: flex;
-  align-items: center;
-  gap: 2.4rem;
-}
-.main .scrolling .container .scrolling__promotion .scroll__promotion-text {
-  font-family: var(--text-heading);
   font-size: 7.4rem;
-  font-weight: 400;
+  font-family: var(--text-heading);
   line-height: 9rem;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
   color: var(--color-scrolling);
-}
-.main .scrolling .container .scrolling__promotion .scroll__promotion-icon img {
   width: 100%;
+}
+.main .scrolling .container .scrolling__promotion .scrolling__content {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  padding-right: 100%; /* để nội dung bắt đầu ngoài khung bên phải */
+  gap: 2rem;
+  align-items: center;
+}
+.main .scrolling .container .scrolling__promotion .scrolling__content .scrolling__promotion-text {
+  padding: 1rem 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

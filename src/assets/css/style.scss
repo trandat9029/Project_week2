@@ -899,17 +899,16 @@ body{
             justify-content: center;
             align-items: center;
             gap: 2.4rem;
+            margin-bottom: 1.8rem;
         }
 
         .footer__copyright{
-            transform: translate(0%, 45%);
             display: flex;
             justify-content: center;
             align-items: center;
             padding-bottom: 1rem;
 
             .footer__copyright-link{
-                
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 2.4rem;

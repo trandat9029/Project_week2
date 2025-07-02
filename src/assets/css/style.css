@@ -6,12 +6,12 @@
   --color-title: #fff;
   --color-pice-new:#D63A2F;
   --color-pice-old:#666666;
+  --color-scrolling: #b3aeae;
   --bg-body: #fff;
   --bg-header: #000;
   --bg-selling-desc:#054E4A;
   --bg-selling-title:#000;
   --bg-sale:#A42003;
-
 }
 
 html {
@@ -78,6 +78,7 @@ body {
   /*===== hero-banner ====*/
   /*====== tabs ====*/
   /*====== slider =====*/
+  /*======= scrolling =====*/
 }
 .main .hero-banner {
   width: 100%;
@@ -260,6 +261,7 @@ body {
   line-height: 2.3rem;
   font-weight: 400;
 }
+
 .main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-price .price-new {
   color: var(--color-pice-new);
 }
@@ -269,7 +271,6 @@ body {
   transform: translate(-10%, 0%);
   margin-left: 0.3rem;
 }
-
 .main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__selling {
   top: 1.2rem;
   left: 1.2rem;
@@ -381,6 +382,29 @@ body {
   color: var(--color-title);
   background-color: var(--bg-selling-desc);
   padding: 0.3rem 0.9rem;
+}
+.main .scrolling {
+  width: 100%;
+}
+.main .scrolling .container {
+  width: 100%;
+}
+.main .scrolling .container .scrolling__promotion {
+  width: 100%;
+  padding: 9rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.main .scrolling .container .scrolling__promotion .scroll__promotion-text {
+  font-family: var(--text-heading);
+  font-size: 7.4rem;
+  font-weight: 400;
+  line-height: 9rem;
+  color: var(--color-scrolling);
+}
+.main .scrolling .container .scrolling__promotion .scroll__promotion-icon img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

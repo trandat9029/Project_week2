@@ -26,6 +26,15 @@ body{
 
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 /*====== header =====*/ 
 .header{
@@ -435,24 +444,29 @@ body{
         width: 100%;
         .container{
             width: 100%;
-
+            
             .scrolling__promotion{
-                width: 100%;
-                padding: 9rem 0;
+                padding: 10rem 0;
                 display: flex;
-                align-items: center;
-                gap: 2.4rem;
+                font-size: 7.4rem;
+                font-family: var(--text-heading);
+                line-height: 9rem;
+                font-weight: 400;
+                overflow: hidden;
+                white-space: nowrap;
+                color: var(--color-scrolling);
+                width: 100%;
 
-                .scroll__promotion-text{
-                    font-family: var(--text-heading);
-                    font-size: 7.4rem;
-                    font-weight: 400;
-                    line-height: 9rem;
-                    color: var(--color-scrolling);
-                }
+                .scrolling__content{
+                    display: flex;
+                    animation: scroll-left 30s linear infinite;
+                    padding-right: 100%; /* để nội dung bắt đầu ngoài khung bên phải */
+                    gap: 2rem;
+                    align-items: center;
 
-                .scroll__promotion-icon img{
-                    width: 100%;
+                    .scrolling__promotion-text{
+                        padding: 1rem 2.4rem;
+                    }
                 }
             }
         }

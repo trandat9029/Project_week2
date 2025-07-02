@@ -4,6 +4,8 @@
     --color-desc: #00000060;
     --color-text: #000;
     --color-title: #fff;
+    --color-pice-new:#D63A2F;
+    --color-pice-old:#666666;
     --color-scrolling: #b3aeae;
     --bg-body: #fff;
     --bg-header: #000;
@@ -12,6 +14,7 @@
     --bg-selling-title:#000;
     --bg-sale:#A42003;
     --bg-salebook: #6E331a;
+
 
 }
 
@@ -308,6 +311,16 @@ body{
                                         line-height: 2.3rem;
                                         font-weight: 400;
 
+                                        .price-new{
+                                            color: var(--color-pice-new);
+                                        }
+                                        .price-old{
+                                            color: var(--color-pice-old);
+                                            text-decoration: line-through;
+                                            transform: translate(-10%, 0%);
+                                            margin-left: 0.3rem;
+
+                                        }
                                     }
                                 }
 

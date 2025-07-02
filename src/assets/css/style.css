@@ -5,6 +5,8 @@
   --color-desc: #00000060;
   --color-text: #000;
   --color-title: #fff;
+  --color-pice-new:#D63A2F;
+  --color-pice-old:#666666;
   --color-scrolling: #b3aeae;
   --bg-body: #fff;
   --bg-header: #000;
@@ -272,6 +274,16 @@ body {
   font-size: 1.6rem;
   line-height: 2.3rem;
   font-weight: 400;
+}
+
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-price .price-new {
+  color: var(--color-pice-new);
+}
+.main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-price .price-old {
+  color: var(--color-pice-old);
+  text-decoration: line-through;
+  transform: translate(-10%, 0%);
+  margin-left: 0.3rem;
 }
 .main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__selling {
   top: 1.2rem;

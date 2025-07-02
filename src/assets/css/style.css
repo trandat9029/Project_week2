@@ -8,6 +8,7 @@
   --color-scrolling: #b3aeae;
   --bg-body: #fff;
   --bg-header: #000;
+  --bg-single-banner: #00000050;
   --bg-selling-desc:#054E4A;
   --bg-selling-title:#000;
   --bg-sale:#A42003;
@@ -89,6 +90,7 @@ body {
   /*======= scrolling =====*/
   /*====== salebook ======*/
   /*====== inspiration =====*/
+  /*====== single-banner ====*/
 }
 .main .hero-banner {
   width: 100%;
@@ -526,6 +528,49 @@ body {
   line-height: 3.8rem;
 }
 .main .inspiration .container .inspiration__list .inspiration__item .inspiration__content .inspiration__desc {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.main .single-banner {
+  width: 100%;
+  margin-top: 10rem;
+  position: relative;
+}
+.main .single-banner .container {
+  width: 100%;
+}
+.main .single-banner .container .single-banner__background img {
+  width: 100%;
+}
+.main .single-banner .container .single-banner__overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--bg-single-banner);
+}
+.main .single-banner .container .single-banner__overlay .single-banner__content {
+  transform: translate(-3%, 12%);
+  font-weight: 400;
+  color: var(--color-title);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.main .single-banner .container .single-banner__overlay .single-banner__content .single-banner__title {
+  font-family: var(--text-heading);
+  font-size: 5.6rem;
+  line-height: 8rem;
+}
+.main .single-banner .container .single-banner__overlay .single-banner__content .single-banner__desc {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }

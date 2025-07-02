@@ -675,6 +675,58 @@ body{
             }
         }
     }
+
+    /*====== services =====*/
+    .services{
+        width: 100%;
+        padding: 8rem 0;
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25.5rem 0 25.5rem;
+
+            .services__list{
+                display: flex;
+                justify-content: center;
+                gap: 6rem;
+
+                .services__item {
+                    width: 29%;
+                    font-weight: 400;
+                    color: var(--color-text);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+
+                    &-icon {
+                        img {
+                        object-fit: cover;
+                        }
+                    }
+
+                    .services__content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+
+                        &-title {
+                        font-family: var(--text-heading);
+                        font-size: 2rem;
+                        line-height: 3.2rem;
+                        }
+
+                        &-desc {
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
 
 

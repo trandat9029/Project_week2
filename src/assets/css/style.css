@@ -93,6 +93,7 @@ body {
   /*====== salebook ======*/
   /*====== inspiration =====*/
   /*====== single-banner ====*/
+  /*====== services =====*/
 }
 .main .hero-banner {
   width: 100%;
@@ -275,7 +276,6 @@ body {
   line-height: 2.3rem;
   font-weight: 400;
 }
-
 .main .tabs .container .tabs__wrap .tabs__product-list .tabs__product-include .tabs__product-group .tabs__product-item .tabs__product-content .tabs__product-price .price-new {
   color: var(--color-pice-new);
 }
@@ -583,6 +583,47 @@ body {
   line-height: 8rem;
 }
 .main .single-banner .container .single-banner__overlay .single-banner__content .single-banner__desc {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.main .services {
+  width: 100%;
+  padding: 8rem 0;
+}
+.main .services .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25.5rem 0 25.5rem;
+}
+.main .services .container .services__list {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+.main .services .container .services__list .services__item {
+  width: 29%;
+  font-weight: 400;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.main .services .container .services__list .services__item-icon img {
+  object-fit: cover;
+}
+.main .services .container .services__list .services__item .services__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.main .services .container .services__list .services__item .services__content-title {
+  font-family: var(--text-heading);
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+.main .services .container .services__list .services__item .services__content-desc {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }

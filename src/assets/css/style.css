@@ -8,6 +8,7 @@
   --color-pice-new:#D63A2F;
   --color-pice-old:#666666;
   --color-scrolling: #b3aeae;
+  --color-input-email: #00000050;
   --bg-body: #fff;
   --bg-header: #000;
   --bg-single-banner: #00000050;
@@ -17,6 +18,7 @@
   --bg-salebook: #6E331a;
   --bg-contact:#F6F2EE;
   --border-contact-link:#D1CECA;
+  --border-input-email: #F6F2EE;
 }
 
 html {
@@ -714,6 +716,91 @@ body {
   position: absolute;
   top: 7rem;
   right: 22.1rem;
+}
+
+/*====== footer ======*/
+.footer {
+  width: 100%;
+  background-color: var(--bg-header);
+  color: var(--color-title);
+  font-weight: 400;
+}
+.footer .container {
+  width: 100%;
+}
+.footer .container .footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+.footer .container .footer__content .footer__sale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.footer .container .footer__content .footer__sale .footer__title {
+  font-family: var(--text-heading);
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+}
+.footer .container .footer__content .footer__sale .footer__desc {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.footer .container .footer__content .footer__form {
+  transform: translate(0%, 10%);
+  width: 46.5rem;
+  position: relative;
+  padding-top: 1.6rem;
+}
+.footer .container .footer__content .footer__form .input-email {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--color-input-email);
+  padding: 1.4rem 1.7rem;
+  border: 0.1rem solid var(--border-input-email);
+}
+.footer .container .footer__content .footer__form .btn-submit {
+  padding: 1.1rem;
+  position: absolute;
+  background-color: var(--bg-body);
+  border: 0px solid var(--bg-body);
+  top: 0;
+  right: 0;
+  transform: translate(0%, 60%);
+}
+.footer .container .footer__social-list {
+  transform: translate(0%, 15%);
+  box-sizing: border-box;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.footer .container .footer__copyright {
+  transform: translate(0%, 45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.footer .container .footer__copyright .footer__copyright-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.footer .container .footer__copyright .footer__copyright-link a {
+  color: var(--color-title);
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

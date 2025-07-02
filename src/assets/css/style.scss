@@ -10,6 +10,7 @@
     --bg-selling-desc:#054E4A;
     --bg-selling-title:#000;
     --bg-sale:#A42003;
+    --bg-salebook: #6E331a;
 
 }
 
@@ -466,6 +467,75 @@ body{
 
                     .scrolling__promotion-text{
                         padding: 1rem 2.4rem;
+                    }
+                }
+            }
+        }
+    } 
+
+    /*====== salebook ======*/
+    .salebook{
+        width: 100%;
+        .container{
+            display: flex;
+            justify-content: center;
+
+            .salebook__list{
+                height: 100%;
+                list-style: none;
+                padding-bottom: 10rem;
+                display: flex;
+                align-items: center;
+
+                .salebook__item{
+                    box-sizing: border-box;
+                    padding: 0 3.75rem;
+                    color: var(--color-title);
+                    font-weight: 400;
+                    .salebook__slogan{
+                        box-sizing: border-box;
+                        height: 56rem;
+                        padding: 0 9rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 3.2rem;
+                        // justify-content: center;
+                        background-color: var(--bg-salebook);
+                        gap: 11rem;
+
+                        .salebook__title{
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            line-height: 2.4rem;
+                            text-transform: uppercase;
+                        }
+                        .salebook__infos{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1.2rem;
+                            .salebook__sale{
+                                font-family: var(--text-heading);
+                                font-size: 5.6rem;
+                                line-height: 8rem;
+                                
+                                span{
+                                    margin-left: 5rem;
+                                }
+
+                            }
+                            .salebook__desc{
+                                font-size: 1.4rem;
+                                line-height: 2.4rem;
+                                
+                                span{
+                                    margin-left: 3rem;
+                                }
+                            }
+                        }
+
                     }
                 }
             }

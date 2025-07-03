@@ -882,28 +882,59 @@ body {
 }
 .main .services {
   width: 100%;
-  padding: 8rem 0;
+}
+.main .services .container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 .main .services .container .services__list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 6rem;
 }
+@media (max-width: 1024px) {
+  .main .services .container .services__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .main .services .container .services__list {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
 .main .services .container .services__list .services__item {
-  width: 29%;
+  width: 100%;
   font-weight: 400;
   color: var(--color-text);
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 }
+@media (max-width: 480px) {
+  .main .services .container .services__list .services__item {
+    flex-direction: row;
+    gap: 1.6rem;
+  }
+}
 .main .services .container .services__list .services__item-icon img {
   object-fit: cover;
+}
+@media (max-width: 480px) {
+  .main .services .container .services__list .services__item-icon img {
+    width: 4rem;
+  }
 }
 .main .services .container .services__list .services__item .services__content {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+@media (max-width: 480px) {
+  .main .services .container .services__list .services__item .services__content {
+    gap: 0.4rem;
+  }
 }
 .main .services .container .services__list .services__item .services__content-title {
   font-family: var(--text-heading);
@@ -913,6 +944,11 @@ body {
 .main .services .container .services__list .services__item .services__content-desc {
   font-size: 1.6rem;
   line-height: 2.4rem;
+}
+@media (max-width: 480px) {
+  .main .services .container .services__list .services__item .services__content-desc {
+    font-size: 1.4rem;
+  }
 }
 .main .contact {
   width: 100%;

@@ -48,11 +48,18 @@ body{
 }
 
 .container{
-    padding: 0 25.5rem;
+    width: 100%;
+    max-width: 1410px; 
+    margin: 0 auto;
+    padding: 0 1.5rem;
     font-weight: 400;
     display: flex;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
+
+    @include desktopS{
+        box-sizing: border-box;
+    }
 }
 
 .btn{
@@ -162,8 +169,11 @@ body{
         font-weight: 400;
         color: var(--color-title);
 
-        .container{
-            padding: 0;
+        .container-special{
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            font-family: "Poppins", sans-serif;
 
             .hero-banner__background{
                 width: 100%;
@@ -192,6 +202,7 @@ body{
                 
                 @include mobile{
                     gap: 2.4rem;
+                    width: auto;
                 }
 
                 .hero-banner__heading{
@@ -253,17 +264,23 @@ body{
     .tabs{
         width: 100%;
         height: 100%;
-        
+        box-sizing: border-box;
+
         .container{
             padding-top: 10rem;
             gap: 4rem;
-            
+        
             /*====== header ======*/ 
             .tabs__header{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 
+                @include tablet{
+                    flex-direction: column;
+                    gap: 3.2rem;
+                }
+
                 .tabs__heading{
                     font-family: var(--text-heading);
                     font-size: 3.6rem;
@@ -273,7 +290,15 @@ body{
                 .tabs__nav{
                     list-style: none;
                     display: flex;
+                    justify-content: center;
                     gap: 4rem;
+
+                    @include tablet{
+                        justify-content: space-around;
+                    }
+                    @include mobileS{
+                        gap: 2.4rem;
+                    }
 
                     .tabs__nav-item{
                         font-size: 1.6rem;
@@ -285,10 +310,14 @@ body{
                         &.active p{
                             height: 0.01rem;
                             background-color: #000;
-                            
                         }
                     }
 
+                    @include mobile{
+                        .tabs__nav-item:last-child{
+                            display: none;
+                        }
+                    }
                 }
             }
             
@@ -306,6 +335,11 @@ body{
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         gap: 1rem;
+                        margin: 0 auto;
+
+                        @include desktopS{
+                            grid-template-columns: 1fr;
+                        }
 
                         .tabs__product-item{
                             width: 100%;
@@ -316,6 +350,10 @@ body{
 
                             .tabs__product-thumbnail img{
                                 object-fit: cover;
+                                
+                                @include desktopS{
+                                    width: 100%;
+                                }
                             }
 
                             .tabs__product-content{
@@ -341,9 +379,7 @@ body{
                                     font-size: 1.6rem;
                                     line-height: 2.3rem;
                                     font-weight: 400;
-
                                 }
-
                             }
                         }
 
@@ -351,21 +387,28 @@ body{
                             width: 100%;
                             height: auto;
                             display: flex;
+                            flex: 1;
                             gap: 1rem;
 
                             .tabs__product-item{
                                 width: 100%;
                                 height: auto;
                                 display: flex;
+                                margin: 0 auto;
                                 flex-direction: column;
                                 gap: 1.6rem;
                                 position: relative;
 
                                 .tabs__product-thumbnail img{
                                     object-fit: cover;
+
+                                    @include desktopS{
+                                        width: 100%;
+                                    }
                                 }
 
                                 .tabs__product-content{
+                                    height: auto;
                                     .tabs__product-category{
                                         font-size: 1.4rem;
                                         line-height: 2.2rem;
@@ -374,6 +417,7 @@ body{
                                     }
 
                                     .tabs__product-name{
+                                        height: auto;
                                         font-size: 1.6rem;
                                         line-height: 2.6rem;
                                         font-weight: 500;
@@ -392,7 +436,6 @@ body{
                                             text-decoration: line-through;
                                             transform: translate(-10%, 0%);
                                             margin-left: 0.3rem;
-
                                         }
                                     }
                                 }
@@ -431,7 +474,6 @@ body{
                                     padding: 0.3rem 0.3rem 0.3rem 1rem;
                                     color: var(--color-title);
                                     background-color: var(--bg-sale);
-
                                 }
                             }
                         }
@@ -911,6 +953,7 @@ body{
             @include mobileS{
                 align-items: start;
                 padding: 3rem 1.5rem 0 1.5rem;
+                width: auto;
             }
 
             .footer__sale{

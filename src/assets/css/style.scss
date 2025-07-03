@@ -10,6 +10,7 @@
     --color-pice-old:#666666;
     --color-scrolling: #b3aeae;
     --color-input-email: #00000050;
+    --color-salebook-tablet: #F3F3F3;
     --bg-body: #fff;
     --bg-header: #000;
     --bg-single-banner: #00000050;
@@ -621,20 +622,42 @@ body{
         .container{
             padding-bottom: 10rem;
 
+            @include tablet{
+                padding-bottom: 0;
+            }
+
             .salebook__list{
-                
                 height: 100%;
                 list-style: none;
                 display: flex;
                 align-items: center;
+
+                @include desktopS{
+                    flex-direction: column;
+                    gap: 2.4rem;
+                }
 
                 .salebook__item{
                     box-sizing: border-box;
                     padding: 0 3.75rem 0  0;
                     color: var(--color-title);
                     font-weight: 400;
+
+                    @include desktopS{
+                        padding: 0;
+                        width: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    @include mobile{
+                        width: 36rem;
+                        img{
+                            width: 100%;
+                        }
+                    }
                     .salebook__slogan{
-                        width: 42rem;
+                        width: 100%;
                         box-sizing: border-box;
                         height: 56rem;
                         padding: 0 9rem;
@@ -644,6 +667,11 @@ body{
                         padding-top: 3.2rem;
                         background-color: var(--bg-salebook);
                         gap: 11rem;
+
+                        @include mobile {
+                            width: 36rem;
+                            padding: 0 6.7rem;
+                        }
 
                         .salebook__title{
                             font-size: 1.6rem;
@@ -661,11 +689,16 @@ body{
                                 font-family: var(--text-heading);
                                 font-size: 5.6rem;
                                 line-height: 8rem;
+
+                                @include tablet{
+                                    font-size: 4.6rem;
+                                    line-height: 6.4rem;
+                                    color: var(--color-salebook-tablet);
+                                }
                                 
                                 span{
                                     margin-left: 5rem;
                                 }
-
                             }
                             .salebook__desc{
                                 font-size: 1.4rem;
@@ -681,6 +714,10 @@ body{
                 }
                 .salebook__item:nth-child(n+2) {
                     padding: 0 3.75rem ;
+
+                    @include desktopS {
+                        padding: 0;
+                    }
                 }
             }
         }

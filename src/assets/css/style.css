@@ -9,6 +9,7 @@
   --color-pice-old:#666666;
   --color-scrolling: #b3aeae;
   --color-input-email: #00000050;
+  --color-salebook-tablet: #F3F3F3;
   --bg-body: #fff;
   --bg-header: #000;
   --bg-single-banner: #00000050;
@@ -585,11 +586,22 @@ body {
 .main .salebook .container {
   padding-bottom: 10rem;
 }
+@media (max-width: 1024px) {
+  .main .salebook .container {
+    padding-bottom: 0;
+  }
+}
 .main .salebook .container .salebook__list {
   height: 100%;
   list-style: none;
   display: flex;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  .main .salebook .container .salebook__list {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
 }
 .main .salebook .container .salebook__list .salebook__item {
   box-sizing: border-box;
@@ -597,8 +609,25 @@ body {
   color: var(--color-title);
   font-weight: 400;
 }
+@media (max-width: 1440px) {
+  .main .salebook .container .salebook__list .salebook__item {
+    padding: 0;
+    width: 50%;
+  }
+  .main .salebook .container .salebook__list .salebook__item img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .main .salebook .container .salebook__list .salebook__item {
+    width: 36rem;
+  }
+  .main .salebook .container .salebook__list .salebook__item img {
+    width: 100%;
+  }
+}
 .main .salebook .container .salebook__list .salebook__item .salebook__slogan {
-  width: 42rem;
+  width: 100%;
   box-sizing: border-box;
   height: 56rem;
   padding: 0 9rem;
@@ -608,6 +637,12 @@ body {
   padding-top: 3.2rem;
   background-color: var(--bg-salebook);
   gap: 11rem;
+}
+@media (max-width: 768px) {
+  .main .salebook .container .salebook__list .salebook__item .salebook__slogan {
+    width: 36rem;
+    padding: 0 6.7rem;
+  }
 }
 .main .salebook .container .salebook__list .salebook__item .salebook__slogan .salebook__title {
   font-size: 1.6rem;
@@ -627,6 +662,13 @@ body {
   font-size: 5.6rem;
   line-height: 8rem;
 }
+@media (max-width: 1024px) {
+  .main .salebook .container .salebook__list .salebook__item .salebook__slogan .salebook__infos .salebook__sale {
+    font-size: 4.6rem;
+    line-height: 6.4rem;
+    color: var(--color-salebook-tablet);
+  }
+}
 .main .salebook .container .salebook__list .salebook__item .salebook__slogan .salebook__infos .salebook__sale span {
   margin-left: 5rem;
 }
@@ -639,6 +681,11 @@ body {
 }
 .main .salebook .container .salebook__list .salebook__item:nth-child(n+2) {
   padding: 0 3.75rem;
+}
+@media (max-width: 1440px) {
+  .main .salebook .container .salebook__list .salebook__item:nth-child(n+2) {
+    padding: 0;
+  }
 }
 .main .inspiration {
   width: 100%;

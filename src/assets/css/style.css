@@ -548,7 +548,7 @@ body {
   width: 100%;
 }
 .main .scrolling .container {
-  padding: 0;
+  padding-right: 0;
 }
 .main .scrolling .container .scrolling__promotion {
   padding: 10rem 0;
@@ -561,6 +561,13 @@ body {
   white-space: nowrap;
   color: var(--color-scrolling);
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .main .scrolling .container .scrolling__promotion {
+    padding: 5.8rem 0;
+    font-size: 6rem;
+    line-height: 6.4rem;
+  }
 }
 .main .scrolling .container .scrolling__promotion .scrolling__content {
   display: flex;

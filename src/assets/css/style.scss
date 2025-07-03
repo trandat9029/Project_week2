@@ -580,8 +580,7 @@ body{
     .scrolling{
         width: 100%;
         .container{
-            padding: 0;
-            
+            padding-right: 0;
             .scrolling__promotion{
                 padding: 10rem 0;
                 display: flex;
@@ -593,6 +592,12 @@ body{
                 white-space: nowrap;
                 color: var(--color-scrolling);
                 width: 100%;
+
+                @include tablet{
+                    padding: 5.8rem 0;
+                    font-size: 6rem;
+                    line-height: 6.4rem;
+                }
 
                 .scrolling__content{
                     display: flex;

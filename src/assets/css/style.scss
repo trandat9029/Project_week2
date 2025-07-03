@@ -1,3 +1,5 @@
+
+
 /*====== root =====*/ 
 :root{
     --text-heading: "Lora", sans-serif;
@@ -44,6 +46,14 @@ body{
   }
 }
 
+.container{
+    padding: 0 25.5rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Poppins", sans-serif;
+}
 
 /*====== header =====*/ 
 .header{
@@ -109,8 +119,7 @@ body{
         color: var(--color-title);
 
         .container{
-            width: 100%;
-            height: 100%;
+            padding: 0;
 
             .hero-banner__background{
                 width: 100%;
@@ -181,12 +190,9 @@ body{
     .tabs{
         width: 100%;
         height: 100%;
-
+        
         .container{
-            padding: 10rem 25.5rem 0 25.5rem;
-            font-weight: 400;
-            display: flex;
-            flex-direction: column;
+            padding-top: 10rem;
             gap: 4rem;
             
             /*====== header ======*/ 
@@ -376,21 +382,21 @@ body{
     .slider{
         width: 100%;
         height: auto;
-        padding-top: 5rem;
 
         .container{
-            padding: 10rem 25.5rem 0 25.5rem;
-            font-weight: 400;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding-top: 5rem;
             gap: 5rem;
 
-            .slider__heading{
-                font-family: var(--text-heading);
-                font-size: 3.6rem;
-                line-height: 4.8rem;
+            .slider__header{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .slider__heading{
+                    font-family: var(--text-heading);
+                    font-size: 3.6rem;
+                    line-height: 4.8rem;
+                }
             }
             .slider__card{
                 list-style: none;
@@ -462,7 +468,7 @@ body{
     .scrolling{
         width: 100%;
         .container{
-            width: 100%;
+            padding: 0;
             
             .scrolling__promotion{
                 padding: 10rem 0;
@@ -494,23 +500,24 @@ body{
     /*====== salebook ======*/
     .salebook{
         width: 100%;
+        
         .container{
-            display: flex;
-            justify-content: center;
+            padding-bottom: 10rem;
 
             .salebook__list{
+                
                 height: 100%;
                 list-style: none;
-                padding-bottom: 10rem;
                 display: flex;
                 align-items: center;
 
                 .salebook__item{
                     box-sizing: border-box;
-                    padding: 0 3.75rem;
+                    padding: 0 3.75rem 0  0;
                     color: var(--color-title);
                     font-weight: 400;
                     .salebook__slogan{
+                        width: 42rem;
                         box-sizing: border-box;
                         height: 56rem;
                         padding: 0 9rem;
@@ -518,7 +525,6 @@ body{
                         flex-direction: column;
                         align-items: center;
                         padding-top: 3.2rem;
-                        // justify-content: center;
                         background-color: var(--bg-salebook);
                         gap: 11rem;
 
@@ -556,6 +562,9 @@ body{
 
                     }
                 }
+                .salebook__item:nth-child(n+2) {
+                    padding: 0 3.75rem ;
+                }
             }
         }
     } 
@@ -564,19 +573,14 @@ body{
     .inspiration{
         width: 100%;
         .container{
-            font-weight: 400;
             color: var(--color-text);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 10rem 25.5rem 0 25.5rem;
+            padding-bottom: 10rem;
 
             .inspiration__header{
                 transform: translate(3%, 0%);
                 width: 50%;
                 display: flex;
-                justify-content: center;
+                margin: 0 auto;
                 padding: 0 0 6rem 0;
 
                 .inspiration__heading{
@@ -631,11 +635,11 @@ body{
     /*====== single-banner ====*/ 
     .single-banner{
         width: 100%;
-        margin-top: 10rem;
         position: relative;
 
         .container{
             width: 100%;
+            padding: 0;
             
             .single-banner__background{
                 img{
@@ -686,11 +690,6 @@ body{
         padding: 8rem 0;
 
         .container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 25.5rem 0 25.5rem;
 
             .services__list{
                 display: flex;
@@ -740,10 +739,6 @@ body{
         background-color: var(--bg-contact);
 
         .container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 24.6rem 25.5rem ;
 
             /* content */ 
@@ -758,6 +753,8 @@ body{
                 .contact__infos{
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                     gap: 2rem;
 
                     .contact__title{
@@ -837,6 +834,7 @@ body{
 
     .container{
         width: 100%;
+        padding: 0;
 
         .footer__content{
             

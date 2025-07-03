@@ -1,5 +1,4 @@
-/* update image */ 
-
+/* update image hero-banner */ 
 function updateHeroImg(){
     const img = document.querySelector('.hero-banner__background-img');
 
@@ -33,3 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
 });
 
+
+/* update image single-banner */ 
+
+function updateSingImg(){
+    const img = document.querySelector('.single-banner__background-img');
+
+    if(!img) return;
+
+    const isMobile = window.innerWidth <= 768;
+    img.src =isMobile ? "/src/assets/img/single-banner-reponsive.png" : "/src/assets/img/single-banner.png"
+}
+window.addEventListener('load', updateSingImg);
+window.addEventListener('resize', updateSingImg);

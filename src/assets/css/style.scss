@@ -921,26 +921,46 @@ body{
     /*====== services =====*/
     .services{
         width: 100%;
-        padding: 8rem 0;
-
+        
         .container{
+            padding-top: 8rem;
+            padding-bottom: 8rem;
 
             .services__list{
-                display: flex;
-                justify-content: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 6rem;
 
+                @include tablet{
+                    grid-template-columns: 1fr 1fr;
+                    gap: 4rem;
+                }
+
+                @include mobileS{
+                    grid-template-columns: 1fr;
+                    gap: 2.4rem;
+                }
+
                 .services__item {
-                    width: 29%;
+                    width: 100%;
                     font-weight: 400;
                     color: var(--color-text);
                     display: flex;
                     flex-direction: column;
                     gap: 2.4rem;
 
+                    @include mobileS{
+                        flex-direction: row;
+                        gap: 1.6rem;
+                    }
+
                     &-icon {
                         img {
-                        object-fit: cover;
+                            object-fit: cover;
+                            
+                            @include mobileS{
+                                width: 4rem;
+                            }
                         }
                     }
 
@@ -949,15 +969,23 @@ body{
                         flex-direction: column;
                         gap: 0.8rem;
 
+                        @include mobileS{
+                            gap: 0.4rem;
+                        }
+
                         &-title {
-                        font-family: var(--text-heading);
-                        font-size: 2rem;
-                        line-height: 3.2rem;
+                            font-family: var(--text-heading);
+                            font-size: 2rem;
+                            line-height: 3.2rem;
                         }
 
                         &-desc {
-                        font-size: 1.6rem;
-                        line-height: 2.4rem;
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+
+                            @include mobileS{
+                                font-size: 1.4rem;
+                            }
                         }
                     }
                 }

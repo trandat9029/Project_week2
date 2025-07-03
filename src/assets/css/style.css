@@ -17,6 +17,7 @@
   --bg-sale:#A42003;
   --bg-salebook: #6E331a;
   --bg-contact:#F6F2EE;
+  --bg-btn:#ffffff00;
   --border-contact-link:#D1CECA;
   --border-input-email: #F6F2EE;
 }
@@ -49,11 +50,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.btn {
+  background-color: var(--bg-btn);
+  border: 0px solid var(--bg-body);
+}
+
 /*====== header =====*/
 .header {
   width: 100%;
   width: auto;
   box-sizing: border-box;
+  position: relative;
 }
 .header__infos {
   height: 3.8rem;
@@ -64,15 +71,35 @@ body {
   color: var(--color-title);
   background-color: var(--bg-header);
 }
+@media (max-width: 1024px) {
+  .header__infos {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__infos {
+    padding: 0 2rem;
+  }
+}
 .header__phone {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
 }
+@media (max-width: 768px) {
+  .header__phone {
+    display: none;
+  }
+}
 .header__address {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
+}
+@media (max-width: 768px) {
+  .header__address {
+    margin: 0 auto;
+  }
 }
 .header__logo {
   width: 100%;
@@ -89,7 +116,27 @@ body {
   text-transform: uppercase;
 }
 .header__button {
+  width: 100%;
+  position: absolute;
+  top: 0;
   display: none;
+}
+.header__button .btn.btn-prev {
+  position: absolute;
+  transform: translate(50%, 60%);
+  left: 0;
+  color: var(--bg-body);
+}
+.header__button .btn.btn-next {
+  position: absolute;
+  transform: translate(-50%, 60%);
+  right: 0;
+  color: var(--bg-body);
+}
+@media (max-width: 1024px) {
+  .header__button {
+    display: block;
+  }
 }
 
 /*=======main  ======*/

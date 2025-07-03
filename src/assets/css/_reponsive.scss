@@ -1,0 +1,22 @@
+// _responsive.scss
+
+// Responsive cho tablet: max-width 1024px
+@mixin tablet {
+  @media (max-width: 1024px ) {
+    @content;
+  }
+}
+
+// Responsive cho mobile lớn: max-width 768px
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Responsive cho mobile siêu nhỏ: max-width 480px
+@mixin mobileS {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

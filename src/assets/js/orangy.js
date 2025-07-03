@@ -10,3 +10,4 @@ function updateHeroImg(){
 }
 window.addEventListener('load', updateHeroImg);
 window.addEventListener('resize', updateHeroImg);
+

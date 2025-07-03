@@ -1,5 +1,11 @@
 // _responsive.scss
 
+@mixin desktopS {
+  @media (max-width: 1440px ) {
+    @content;
+  }
+}
+
 // Responsive cho tablet: max-width 1024px
 @mixin tablet {
   @media (max-width: 1024px ) {

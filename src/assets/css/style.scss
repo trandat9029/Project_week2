@@ -728,6 +728,7 @@ body{
         width: 100%;
         .container{
             color: var(--color-text);
+            padding-top: 4.7rem;
             padding-bottom: 10rem;
 
             .inspiration__header{
@@ -737,6 +738,17 @@ body{
                 margin: 0 auto;
                 padding: 0 0 6rem 0;
 
+                @include desktopS{
+                    width: 60%;
+                    padding: 0 0 4.9rem 0;
+                }
+                @include tablet{
+                    width: 40rem;
+                }
+                @include mobile{
+                    width: 35rem;
+                }
+
                 .inspiration__heading{
                     padding: 0 4rem;
                     font-family: var(--text-heading);
@@ -744,8 +756,36 @@ body{
                     line-height: 4.8rem;
                     color: var(--color-text);
 
+                    @include tablet{
+                        padding: 0;
+                    }
+
+                    @include mobile{
+                        font-size: 2.8rem;
+                        line-height: 3.8rem;
+                    }
+
+                    .inspiration__space2{
+                        margin-left: 0;
+                        @include mobile{
+                            margin-left: 1.8rem;
+                        }
+                    }
+
                     span{
                         margin-left: 1.6rem;
+                        display: inline;
+
+                        .inspiration__space1{
+                            margin-left: 0;
+                            @include mobile{
+                                margin-left: 3.5rem;
+                            }
+                        }
+
+                        @include mobile{
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -754,10 +794,22 @@ body{
                 list-style: none;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 gap: 8.2rem;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none; 
+                }
+
+                @include mobile{
+                    gap:2.4rem;
+                }
 
                 .inspiration__item{
+                    scroll-snap-align: start;
                     display: flex;
                     flex-direction: column;
                     gap: 1.6rem;
@@ -774,11 +826,20 @@ body{
                             font-family: var(--text-heading);
                             font-size: 2.4rem;
                             line-height: 3.8rem;
+
+                            @include mobile{
+                                font-size: 2rem;
+                                line-height: 3rem;
+                            }
                         }
 
                         .inspiration__desc{
                             font-size: 1.6rem;
                             line-height: 2.4rem;
+
+                            @include mobile{
+                                font-size: 1.4rem;
+                            }
                         }
                     }
                 }

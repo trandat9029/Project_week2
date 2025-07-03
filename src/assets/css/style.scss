@@ -52,7 +52,6 @@ body{
     font-weight: 400;
     display: flex;
     flex-direction: column;
-
     font-family: "Poppins", sans-serif;
 }
 
@@ -881,13 +880,20 @@ body{
         width: 100%;
         padding: 0;
 
+
         .footer__content{
-            
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding-top: 5rem;
+
+            @include mobileS{
+                align-items: start;
+                padding: 3rem 1.5rem 0 1.5rem;
+            }
+
             .footer__sale{
                 display: flex;
                 flex-direction: column;
@@ -895,10 +901,19 @@ body{
                 justify-content: center;
                 gap: 0.8rem;
 
+                @include mobileS{
+                    align-items: start;
+                }
+
                 .footer__title{
                     font-family: var(--text-heading);
                     font-size: 3.2rem;
                     line-height: 4.2rem;
+
+                    @include mobile{
+                        font-size: 2.4rem;
+                        line-height: 3.4rem;
+                    }
                 }
                 .footer__desc{
                     font-size: 1.6rem;
@@ -910,6 +925,15 @@ body{
                 width: 46.5rem;
                 position: relative;
                 padding-top: 1.6rem;
+
+                @include mobile{
+                    width: 36rem;
+                    transform: translate(0%, 0%);
+                }
+                @include mobileS{
+                    width: 92%;
+                    transform: translate(0%, 0%);
+                }
 
                 .input-email{
                     font-family: "Poppins", sans-serif;
@@ -943,6 +967,11 @@ body{
             align-items: center;
             gap: 2.4rem;
             margin-bottom: 1.8rem;
+
+            @include mobileS{
+                padding-left: 1.5rem;
+                justify-content: start;
+            }
         }
 
         .footer__copyright{
@@ -950,6 +979,11 @@ body{
             justify-content: center;
             align-items: center;
             padding-bottom: 1rem;
+
+            @include mobileS{
+                padding-left: 1.5rem;
+                justify-content: start;
+            }
 
             .footer__copyright-link{
                 font-size: 1.6rem;

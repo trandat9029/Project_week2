@@ -7,6 +7,12 @@
 }
 
 // Responsive cho tablet: max-width 1024px
+@mixin tabletL {
+  @media (max-width: 1220px ) {
+    @content;
+  }
+}
+// Responsive cho tablet: max-width 1024px
 @mixin tablet {
   @media (max-width: 1024px ) {
     @content;

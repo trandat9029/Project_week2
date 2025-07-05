@@ -999,78 +999,78 @@ body{
     } 
 
     /*====== contact =====*/ 
-.contact {
-    position: relative;
-    width: 100%;
-    background-color: var(--bg-contact);
-
-    .container {
-        height: 100%;
+    .contact {
         position: relative;
-        justify-content: center;
-        align-items: center;
-        padding: 24.6rem 0;
-        text-align: center;
+        width: 100%;
+        background-color: var(--bg-contact);
 
-        @include mobile {
-        flex-direction: column;
+        .container {
+            height: 100%;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding: 24.6rem 0;
+            text-align: center;
+
+            @include mobile {
+            flex-direction: column;
+            }
         }
-    }
 
-    .contact__content {
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3.2rem;
-
-        .contact__infos {
+        .contact__content {
+            z-index: 2;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            align-items: center;
+            gap: 3.2rem;
 
-            .contact__title {
-                margin: 0 auto;
-                width: 40%;
-                font-size: 1.6rem;
-                font-weight: 500;
-                line-height: 2.4rem;
-                text-transform: uppercase;
+            .contact__infos {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
 
-                @include tablet {
-                    width: 100%;
+                .contact__title {
+                    margin: 0 auto;
+                    width: 40%;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2.4rem;
+                    text-transform: uppercase;
+
+                    @include tablet {
+                        width: 100%;
+                    }
                 }
-            }
 
-            .contact__address {
-                font-size: 3.2rem;
-                line-height: 5.6rem;
-                font-family: var(--text-heading);
+                .contact__address {
+                    font-size: 3.2rem;
+                    line-height: 5.6rem;
+                    font-family: var(--text-heading);
 
-                .line-desktop {
-                    display: inline;
+                    .line-desktop {
+                        display: inline;
 
-                    @include mobileS {
+                        @include mobileS {
+                            display: none;
+                        }
+                    }
+
+                    .line-mobile {
                         display: none;
-                    }
-                }
 
-                .line-mobile {
-                    display: none;
-
-                    @include mobileS {
-                        display: inline-block;
-                        line-height: 4rem;
+                        @include mobileS {
+                            display: inline-block;
+                            line-height: 4rem;
+                        }
                     }
                 }
             }
-        }
-        .contact__link {
-            border: 1px solid var(--border-contact-link);
-            padding: 1rem 4rem;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            }
+            .contact__link {
+                border: 1px solid var(--border-contact-link);
+                padding: 1rem 4rem;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                }
         }
         .contact__image {
             position: absolute;
@@ -1092,7 +1092,7 @@ body{
             }
         }
 
-    // ===== Desktop positions =====
+        /* Desktop positions  */  
         .contact__image1 {
             top: 5%;
             left: 5%;
@@ -1124,7 +1124,7 @@ body{
         }
 
         .contact__image4 {
-            bottom: 9%;
+            bottom: 12%;
             right: 12%;
 
             @include tablet{
@@ -1141,7 +1141,7 @@ body{
             }
         }
 
-        // ===== Mobile adjustments =====
+        /* Mobile adjustments */ 
         @include mobile {
             .contact__image1 {
                 top: 2rem;
@@ -1161,7 +1161,7 @@ body{
             }
 
             .contact__image4 {
-                bottom: 11rem;
+                bottom: 6rem;
                 left: 76%;
                 transform: translateX(-50%);
             }
@@ -1170,6 +1170,18 @@ body{
                 top: 51rem;
                 left: 4.5rem;
             }
+        }
+        @include mobileS{
+            .contact__image5 {
+                top: 52rem;
+                left: 4.5rem;
+            }
+            .contact__image4 {
+                bottom: 11rem;
+                left: 76%;
+                transform: translateX(-50%);
+            }
+                
         }
     }
 }

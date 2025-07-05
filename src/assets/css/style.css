@@ -959,6 +959,8 @@ body {
   position: relative;
   width: 100%;
   background-color: var(--bg-contact);
+  /* Desktop positions  */
+  /* Mobile adjustments */
 }
 .main .contact .container {
   height: 100%;
@@ -1081,7 +1083,7 @@ body {
   }
 }
 .main .contact .contact__image4 {
-  bottom: 9%;
+  bottom: 12%;
   right: 12%;
 }
 @media (max-width: 1024px) {
@@ -1114,13 +1116,24 @@ body {
     transform: translateX(-50%);
   }
   .main .contact .contact__image4 {
-    bottom: 11rem;
+    bottom: 6rem;
     left: 76%;
     transform: translateX(-50%);
   }
   .main .contact .contact__image5 {
     top: 51rem;
     left: 4.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .main .contact .contact__image5 {
+    top: 52rem;
+    left: 4.5rem;
+  }
+  .main .contact .contact__image4 {
+    bottom: 11rem;
+    left: 76%;
+    transform: translateX(-50%);
   }
 }
 

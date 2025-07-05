@@ -5,7 +5,7 @@ function updateHeroImg(){
     if(!img) return;
 
     const isMobile = window.innerWidth <= 768;
-    img.src =isMobile ? "/src/assets/img/hero-banner-mobile.png" : "/src/assets/img/hero-banner.png"
+    img.src =isMobile ? "src/assets/img/hero-banner-mobile.png" : "src/assets/img/hero-banner.png"
 }
 window.addEventListener('load', updateHeroImg);
 window.addEventListener('resize', updateHeroImg);
@@ -40,7 +40,7 @@ function updateSingImg(){
     if(!img) return;
 
     const isMobile = window.innerWidth <= 768;
-    img.src =isMobile ? "/src/assets/img/single-banner-reponsive.png" : "/src/assets/img/single-banner.png"
+    img.src =isMobile ? "src/assets/img/single-banner-reponsive.png" : "src/assets/img/single-banner.png"
 }
 window.addEventListener('load', updateSingImg);
 window.addEventListener('resize', updateSingImg);

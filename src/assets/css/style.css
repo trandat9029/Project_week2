@@ -831,9 +831,9 @@ body {
   width: 100%;
   height: 35rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .main .single-banner .container-special .single-banner__background img {
-    height: auto;
+    height: 100%;
   }
 }
 .main .single-banner .container-special .single-banner__overlay {

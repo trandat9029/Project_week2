@@ -580,8 +580,13 @@ body{
     /*======= scrolling =====*/
     .scrolling{
         width: 100%;
-        .container{
-            padding-right: 0;
+        .container-special{
+            
+            padding: 0;
+            @include tablet{
+                padding-right: 0;
+            }
+
             .scrolling__promotion{
                 padding: 10rem 0;
                 display: flex;

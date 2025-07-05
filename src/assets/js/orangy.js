@@ -14,7 +14,7 @@ window.addEventListener('resize', updateHeroImg);
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('.slider', {
     type: 'slide',
-    perPage: 4, // desktop
+    perPage: 4, 
     gap: '1rem',
     pagination: false,
     arrows: false,
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* update image single-banner */ 
-
 function updateSingImg(){
     const img = document.querySelector('.single-banner__background-img');
 
@@ -45,3 +44,21 @@ function updateSingImg(){
 }
 window.addEventListener('load', updateSingImg);
 window.addEventListener('resize', updateSingImg);
+
+/* submit form and check validate email */
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".footer__form");
+  const emailInput = form.querySelector(".input-email");
+
+  form.addEventListener("submit", function (e) {
+    const emailValue = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailValue)) {
+      e.preventDefault(); 
+      alert("Vui lòng nhập đúng định dạng email!");
+      emailInput.focus();
+    }
+  });
+});
+

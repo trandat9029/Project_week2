@@ -14,19 +14,19 @@ window.addEventListener('resize', updateHeroImg);
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('.slider', {
     type: 'slide',
-    perPage: 4, 
-    gap: '1rem',
-    pagination: false,
-    arrows: false,
+    perPage: 4,             // Default: 4 items
+    gap: '1rem',            // Space between slides
+    pagination: false,      // Hide pagination dots
+    arrows: false,          // Hide navigation arrows
     breakpoints: {
         1280: {
-        perPage: 3,
+        perPage: 3,     // 3 items on screen ≤ 1280px
         },
         1024: {
-        perPage: 2,
+        perPage: 2,     // 2 items on screen ≤ 1024px
         },
         768: {
-        perPage: 1.5, // vuốt 1.5 item
+        perPage: 1.5,   // 1.5 items on screen ≤ 768px (shows partially next item)
         },
     },
     }).mount();
@@ -47,18 +47,18 @@ window.addEventListener('resize', updateSingImg);
 
 /* submit form and check validate email */
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".footer__form");
-  const emailInput = form.querySelector(".input-email");
+    const form = document.querySelector(".footer__form");
+    const emailInput = form.querySelector(".input-email");
 
-  form.addEventListener("submit", function (e) {
-    const emailValue = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    form.addEventListener("submit", function (e) {
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;    // Simple email format check
 
-    if (!emailRegex.test(emailValue)) {
-      e.preventDefault(); 
-      alert("Vui lòng nhập đúng định dạng email!");
-      emailInput.focus();
-    }
-  });
+        if (!emailRegex.test(emailValue)) {
+        e.preventDefault();     // Stop form from submitting
+        alert("Vui lòng nhập đúng định dạng email!");
+        emailInput.focus();     // Focus back to the input
+        }
+    });
 });
 

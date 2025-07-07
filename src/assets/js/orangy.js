@@ -62,3 +62,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* function  toggle Answer */ 
+function toggleAnswer(){
+    const contents = document.querySelectorAll(".faq__content-item");
+
+    contents.forEach((item) =>{
+        const question = item.querySelector(".faq__question");
+        const answer = item.querySelector(".faq__answer");
+
+        question.addEventListener('click', () =>{
+            const isActive = item.classList.contains("--active");
+
+            contents.forEach((i) => {
+                const ans = i.querySelector(".faq__answer");
+                if (i.classList.contains("--active")) {
+                    ans.style.height = ans.scrollHeight + "px"; 
+                    requestAnimationFrame(() => {
+                        i.classList.remove("--active");
+                        ans.style.height = "0";
+                    });
+                } else {
+                    i.classList.remove("--active");
+                    ans.style.height = "0";
+                }
+            });
+
+            if(!isActive){
+                item.classList.add("--active");
+                const fullHeight = answer.scrollHeight;
+                answer.style.height = fullHeight + "px";
+
+                answer.addEventListener("transitionend", function handleTransitionEnd() {
+                    answer.style.height = "auto";
+                    answer.removeEventListener("transitionend", handleTransitionEnd);
+                });
+            }
+        })
+    })
+}
+toggleAnswer();
+

@@ -102,3 +102,57 @@ function toggleAnswer(){
 }
 toggleAnswer();
 
+
+
+/* function close popup */
+/* set cookie */ 
+function setCookie(name, value, minutes) {
+    const expires = new Date(Date.now() + minutes * 60 * 1000).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+}
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+}
+
+function closePopup() {
+    const popup = document.querySelector(".popup-sales");
+    popup.classList.add("popup--hidden");
+    setCookie("popupClosed", "true", 1); 
+}
+
+function triggerPopup() {
+    const popup = document.querySelector(".popup-sales");
+
+    
+    if (!getCookie("popupClosed")) {
+        setTimeout(() => {
+        popup.classList.remove("popup--hidden");
+        }, 3000);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    // Đảm bảo có thể kích hoạt popup lại sau khi cookie hết
+    window.addEventListener("mousemove", triggerPopup);
+    window.addEventListener("touchstart", triggerPopup);
+
+    document.querySelector(".btn-close").addEventListener("click", closePopup);
+});
+
+// Đóng popup nếu click ra ngoài nội dung
+document.querySelector(".popup-sales").addEventListener("click", function (event) {
+    const popupContent = document.querySelector(".popup__content");
+
+    // Nếu click vào chính .popup-sales nhưng KHÔNG phải bên trong nội dung
+    if (!popupContent.contains(event.target)) {
+        closePopup(); // Gọi hàm đóng
+    }
+});
+
+
+
+

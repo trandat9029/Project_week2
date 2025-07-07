@@ -24,6 +24,7 @@
   --border-faq-line-active: #000;
   --border-contact-link:#D1CECA;
   --border-input-email: #F6F2EE;
+  --border-btn-close: #EDEDED;
 }
 
 /* ========= Base HTML & body Setup  ========= */
@@ -37,6 +38,7 @@ body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
 }
 
 @keyframes scroll-left {
@@ -160,6 +162,7 @@ body {
   height: 100%;
   background-color: var(--bg-body);
   color: var(--color-text);
+  /*====== popup ======*/
   /*===== hero-banner ====*/
   /*====== tabs section ====*/
   /*====== slider section =====*/
@@ -170,6 +173,139 @@ body {
   /*====== single-banner section ====*/
   /*====== services section =====*/
   /*====== contact section =====*/
+}
+.main .popup-sales {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  background-color: var(--bg-single-banner);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+.main .popup-sales.popup--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.95);
+}
+.main .popup-sales .container-special {
+  width: 100%;
+  padding: 4.5rem;
+  max-width: 88rem;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .main .popup-sales .container-special {
+    max-width: 42rem;
+  }
+}
+@media (max-width: 480px) {
+  .main .popup-sales .container-special {
+    max-width: 30rem;
+  }
+}
+.main .popup-sales .container-special .popup-sales__content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: var(--bg-body);
+}
+@media (max-width: 1024px) {
+  .main .popup-sales .container-special .popup-sales__content {
+    flex-wrap: wrap;
+  }
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__thumbnail img {
+  object-fit: cover;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .main .popup-sales .container-special .popup-sales__content .popup-sales__thumbnail img {
+    width: 42rem;
+    height: 24rem;
+  }
+}
+@media (max-width: 480px) {
+  .main .popup-sales .container-special .popup-sales__content .popup-sales__thumbnail img {
+    width: 30rem;
+    height: 18rem;
+  }
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 4rem;
+}
+@media (max-width: 1024px) {
+  .main .popup-sales .container-special .popup-sales__content .popup-sales__infos {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .popup-sales .container-special .popup-sales__content .popup-sales__infos {
+    padding: 2.4rem 2.7rem;
+  }
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__infos .popup-sales__title {
+  font-family: var(--text-heading);
+  font-size: 3.6rem;
+  line-height: 5.6rem;
+  text-align: center;
+  white-space: normal;
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__infos .popup-sales__title span {
+  font-size: 3.2rem;
+}
+@media (max-width: 768px) {
+  .main .popup-sales .container-special .popup-sales__content .popup-sales__infos .popup-sales__title span {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__infos .popup-sales__desc {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin-top: 1.6rem;
+}
+.main .popup-sales .container-special .popup-sales__content .popup-sales__infos .popup-sales__desc span {
+  display: block;
+}
+.main .popup-sales .container-special .popup-sales__content .btn-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 1px solid var(--border-btn-close);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main .popup-sales .container-special .popup-sales__content .btn-close i {
+  font-size: 2rem;
+  color: var(--color-plus);
+}
+@media (max-width: 1024px) {
+  .main .popup-sales .container-special .popup-sales__content .btn-close {
+    width: 3.2rem;
+    height: 3.2rem;
+    right: 0.8rem;
+    background-color: var(--bg-body);
+  }
 }
 .main .hero-banner {
   width: 100%;

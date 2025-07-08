@@ -131,7 +131,32 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// cookie bar
+//display cookie-bar
+
+document.addEventListener("DOMContentLoaded", function(){
+    const cookieBar = document.querySelector(".cookie-bar");
+    const cookieAccepted = localStorage.getItem("cookieConsent");
+
+    if(!cookieAccepted){
+        cookieBar.style.display = "block";
+    }
+});
+
+// accept
+document.querySelector(".btn-accept").addEventListener("click", function() {
+    const expireDate = new Date();
+    expireDate.setMonth(expireDate.getMonth() + 6); // 6 tháng
+
+    localStorage.setItem("cookieConsent", expireDate.toISOString());
+    document.querySelector(".cookie-bar").style.display = "none";
+});
 
 
+// ignore
+document.querySelector(".btn-ignore").addEventListener("click", function() {
+    // Không lưu vào localStorage
+    document.querySelector(".cookie-bar").style.display = "none";
+});
 
 

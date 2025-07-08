@@ -45,22 +45,6 @@ function updateSingImg(){
 window.addEventListener('load', updateSingImg);
 window.addEventListener('resize', updateSingImg);
 
-/* submit form and check validate email */
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".footer__form");
-    const emailInput = form.querySelector(".input-email");
-
-    form.addEventListener("submit", function (e) {
-        const emailValue = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;    // Simple email format check
-
-        if (!emailRegex.test(emailValue)) {
-        e.preventDefault();     // Stop form from submitting
-        alert("Vui lòng nhập đúng định dạng email!");
-        emailInput.focus();     // Focus back to the input
-        }
-    });
-});
 
 /* function  toggle Answer */ 
 function toggleAnswer(){
@@ -97,12 +81,10 @@ function toggleAnswer(){
                     answer.removeEventListener("transitionend", handleTransitionEnd);
                 });
             }
-        })
-    })
+        });
+    });
 }
 toggleAnswer();
-
-
 
 /* function close popup */
 /* set cookie */ 

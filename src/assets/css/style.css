@@ -1249,7 +1249,7 @@ body {
 }
 @media (max-width: 480px) {
   .main .faq .container .faq__header .faq__heading {
-    width: 50%;
+    width: 53%;
   }
 }
 .main .faq .container .faq__content-list {

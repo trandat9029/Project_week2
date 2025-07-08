@@ -133,7 +133,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // cookie bar
 //display cookie-bar
-
 document.addEventListener("DOMContentLoaded", function(){
     const cookieBar = document.querySelector(".cookie-bar");
     const cookieAccepted = localStorage.getItem("cookieConsent");

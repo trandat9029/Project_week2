@@ -48,7 +48,6 @@ function showPopup(mainText, descText){
     popupNoti.classList.remove("popup--hidden");
 }
 
-
 // submit form
 document.addEventListener("DOMContentLoaded", function(){
     autofillForm();
@@ -101,15 +100,42 @@ document.addEventListener("DOMContentLoaded", function(){
                 showPopup("Thank you!", "Data has been sent successfully.");
             }
             else {
-            showPopup("Oops! An error occurred.", "Please check your information and try again.");
+                showPopup("Oops! An error occurred.", "Please check your information and try again.");
             }
         } catch (error) {
             showPopup("Oops! A network error occurred.", "Please check your connection and try again.");
         }
-    })
-})
+    });
+});
 
+// Newsletter Form
+document.addEventListener("DOMContentLoaded", function(){
+    const form = document.querySelector(".footer__form");
 
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("emailFooter").value.trim();
+        if (!email || !isValidEmail(email)) {
+            alert("Please enter a valid email.");
+            return;
+        }
+
+        // Gửi request không cần chờ phản hồi (no-cors)
+        fetch("https://script.google.com/macros/s/AKfycbwlnruolAEFek8x1wUYLxocHdIuwHWrHYXSfzSXZSygslzejM-ppDe76EuK8jkKWyB4/exec", {
+            method: "POST",
+            mode: "no-cors", // bắt buộc để tránh lỗi CORS
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `email=${encodeURIComponent(email)}`
+        });
+
+        // Reset form và hiển thị popup ngay sau khi gửi
+        form.reset();
+        showPopup("Thank you!", "Your email has been sent.");
+    });
+});
 
 
 /*close popup */ 

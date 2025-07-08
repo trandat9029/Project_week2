@@ -102,3 +102,17 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
+
+
+/*close popup */ 
+document.addEventListener("DOMContentLoaded", () => {
+    const popupNoti = document.querySelector(".popup-noti");
+
+    // Tìm nút đóng nằm bên trong popup
+    const popupCloseBtn = popupNoti.querySelector(".btn-close");
+
+    popupCloseBtn.addEventListener("click", () => {
+        popupNoti.classList.add("popup--hidden");
+    });
+});
+

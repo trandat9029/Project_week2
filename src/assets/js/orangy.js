@@ -122,7 +122,7 @@ function getCookie(name) {
 function closePopup() {
   const popup = document.querySelector(".popup-sales");
   popup.classList.add("popup--hidden");
-  setCookie("popupClosed", "true", 60)
+  setCookie("popupClosed", "true", 240)
 }
 
 /* set display popup after 3 second */ 

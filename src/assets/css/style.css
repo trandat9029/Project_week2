@@ -461,7 +461,7 @@ body {
 @media (max-width: 768px) {
   .main .hero-banner .container-special .hero-banner__content {
     gap: 2.4rem;
-    width: auto;
+    width: 29rem;
   }
 }
 .main .hero-banner .container-special .hero-banner__content .hero-banner__heading {
@@ -486,6 +486,7 @@ body {
   }
 }
 .main .hero-banner .container-special .hero-banner__content .hero-banner__desc {
+  width: 100%;
   font-size: 1.8rem;
   line-height: 3rem;
   transform: translate(3%, -20%);

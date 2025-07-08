@@ -405,6 +405,49 @@
             </div>
         </section>
 
+        <!-- contact Form -->
+        <section class="contactForm">
+            <div class="container">
+                <div class="contactForm__header">
+                    <h2 class="contactForm__heading">Contact us to order and <br/>receive purchase advice</h2>
+                </div>
+                <form action="#" class="contactForm__form" novalidate>
+                    <div class="contactForm__gird">  
+                        <div class="contactForm__group">
+                            <label for="name">Name *</label><br/>
+                            <input type="text" name="nameForm" id="name" placeholder="Name" required>
+                            <p class="nameError"></p>
+                        </div>
+
+                        <div class="contactForm__group">
+                            <label for="email">Email *</label><br/>
+                            <input type="text" name="emailForm" id="email" placeholder="Email" required>
+                            <p class="emailError"></p>
+                        </div>
+                    </div>
+                    <div class="contactForm__gird">
+                        <div class="contactForm__group">
+                            <label for="phone">Phone *</label> <br/>
+                            <input type="text" name="phoneForm" id="phone" placeholder="Phone" required>
+                            <p class="phoneError"></p>
+                        </div>
+
+                        <div class="contactForm__group">
+                            <label for="address">address </label> <br/>
+                            <input type="text" name="addressForm" id="address" placeholder="Address" >
+                        </div>
+                    </div>
+                    <div class="contactForm__group message">
+                        <label for="message">Your message</label><br/>  
+                        <textarea name="messageForm" id="message" placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."></textarea>
+                    </div>
+                    <input type="submit" value="submit" class="btn btn-contactForm">
+                    <span class="contactForm__note">* Required</span>
+                </form>
+            </div>
+        </section>
+
+
         <!-- inspiration -->
         <section class="inspiration">
             <div class="container">
@@ -693,6 +736,7 @@
 
     <!-- script -->
     <script src="src/assets/js/orangy.js"></script>
+    <script src="src/assets/js/form.js"></script>
 
     <!-- slider -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>

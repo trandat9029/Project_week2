@@ -23,6 +23,8 @@
   --bg-contact:#F6F2EE;
   --bg-popup-noti:#fff;
   --bg-btn:#ffffff00;
+  --bg-btn-accept:#000;
+  --bg-cookie-bar:#ffffffc9;
   --bg-btn-contactForm:#000;
   --border-faq-line:#EDEDED;
   --border-faq-line-active: #000;
@@ -73,8 +75,10 @@ body {
 
 /*===== button =====*/
 .btn {
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg-btn);
   border: 0px solid var(--bg-body);
+  cursor: pointer;
 }
 
 /*====== header section =====*/
@@ -180,6 +184,7 @@ body {
   /*====== single-banner section ====*/
   /*====== services section =====*/
   /*====== contact section =====*/
+  /*====== cookie bar =====*/
 }
 .main .popup-sales {
   width: 100%;
@@ -1633,6 +1638,100 @@ body {
     bottom: 11rem;
     left: 76%;
     transform: translateX(-50%);
+  }
+}
+.main .cookie-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-cookie-bar);
+}
+.main .cookie-bar .container-special {
+  box-sizing: border-box;
+  font-weight: 400;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  .main .cookie-bar .container-special {
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+  }
+}
+.main .cookie-bar .container-special .cookie-bar__content {
+  width: 100%;
+}
+.main .cookie-bar .container-special .cookie-bar__content .cookie-bar__title {
+  font-size: 2rem;
+  line-height: 5.6rem;
+}
+@media (max-width: 1024px) {
+  .main .cookie-bar .container-special .cookie-bar__content .cookie-bar__title {
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .cookie-bar .container-special .cookie-bar__content .cookie-bar__title {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+.main .cookie-bar .container-special .cookie-bar__button {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .main .cookie-bar .container-special .cookie-bar__button {
+    gap: 1rem;
+  }
+}
+.main .cookie-bar .container-special .cookie-bar__button .btn-accept {
+  padding: 0.5rem 2rem;
+  background-color: var(--bg-btn-accept);
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .main .cookie-bar .container-special .cookie-bar__button .btn-accept {
+    padding: 0.5rem 1.4rem;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .cookie-bar .container-special .cookie-bar__button .btn-accept {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+  }
+}
+.main .cookie-bar .container-special .cookie-bar__button .btn-ignore {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .main .cookie-bar .container-special .cookie-bar__button .btn-ignore {
+    padding: 0.5rem 1.4rem;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .cookie-bar .container-special .cookie-bar__button .btn-ignore {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
   }
 }
 

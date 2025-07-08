@@ -1,5 +1,4 @@
 
-
 // validate email
 function isValidEmail(email){
     return /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
@@ -40,6 +39,15 @@ function autofillForm(){
         if(val) document.getElementById(filed).value = val;
     });
 }
+
+//show text of popup notification
+function showPopup(mainText, descText){
+    const popupNoti = document.querySelector(".popup-noti");
+    popupNoti.querySelector(".popup-noti__main").textContent = mainText;
+    popupNoti.querySelector(".popup-noti__desc").textContent = descText;
+    popupNoti.classList.remove("popup--hidden");
+}
+
 
 // submit form
 document.addEventListener("DOMContentLoaded", function(){
@@ -88,15 +96,15 @@ document.addEventListener("DOMContentLoaded", function(){
             });
 
             if (response.ok) {
-                console.log("Form submitted successfully!");
-                alert("✅ Your message has been sent successfully.");
                 saveToLocalStorage({ name, email, phone, address });
                 form.reset();
-            } else {
-                alert("❌ Failed to send. Please try again later.");
+                showPopup("Thank you!", "Data has been sent successfully.");
+            }
+            else {
+            showPopup("Oops! An error occurred.", "Please check your information and try again.");
             }
         } catch (error) {
-            alert("⚠️ Network error. Please check your connection.");
+            showPopup("Oops! A network error occurred.", "Please check your connection and try again.");
         }
     })
 })

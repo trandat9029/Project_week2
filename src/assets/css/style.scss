@@ -378,6 +378,17 @@ body{
                             font-size: 1.8rem;
                             line-height: 3.6rem;
                         }
+
+                        .popup-noti__desc{
+                            @include mobile{
+                                font-size: 1.8rem;
+                                line-height: 3.6rem;
+                            }
+                            @include mobileS{
+                                font-size: 1.4rem;
+                                line-height: 3.6rem;
+                            }
+                        }
                     }
                 }
                 .btn-close{
@@ -984,6 +995,14 @@ body{
             padding-top: 10rem;
             gap: 6rem;
 
+            @include mobile{
+                gap: 3.7rem;
+            }
+
+            @include mobile{
+                padding-top: 6rem;
+            }
+
             .contactForm__header{
                 width: 100%;
                 display: flex;
@@ -1049,10 +1068,10 @@ body{
                     label{
                         font-size: 1.6rem;
                         line-height: 2.4rem;
-
                     }
 
                     textarea{
+                        padding: 1.1rem 1.7rem;
                         box-sizing: border-box;
                         font-family: "Poppins", sans-serif;
                         font-size: 1.6rem;
@@ -1088,13 +1107,12 @@ body{
                         transform: scale(1.02);
                     }
 
-                    @include tablet{
+                    @include mobileS{
                         width: 100%;
                     }
                 }
 
                 .contactForm__note{
-                    
                     font-size: 1.6rem;
                     line-height: 2.4rem;
                     color: var(--color-text);
@@ -1102,6 +1120,10 @@ body{
                     margin-top: 2rem;
                     margin-left: auto;
                     margin-right: auto;
+
+                    @include mobile{
+                        margin-bottom: 6.2rem;
+                    }
                 }
             }
         }
@@ -1776,10 +1798,11 @@ body{
                 .btn-submit{
                     padding: 1.1rem;
                     position: absolute;
-                    background-color: var(--bg-body);
+                    background-color: var(--bg-btn);
                     border: 0px solid var(--bg-body);
                     top: 0;
                     right: 0;
+                    cursor: pointer;
                     transform: translate(0%, 60%);
                 }
             }

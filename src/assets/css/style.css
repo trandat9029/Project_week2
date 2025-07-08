@@ -382,6 +382,18 @@ body {
     line-height: 3.6rem;
   }
 }
+@media (max-width: 768px) {
+  .main .popup-noti .container-special .popup-noti__content .popup-noti__infos .popup-noti__title .popup-noti__desc {
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .main .popup-noti .container-special .popup-noti__content .popup-noti__infos .popup-noti__title .popup-noti__desc {
+    font-size: 1.4rem;
+    line-height: 3.6rem;
+  }
+}
 .main .popup-noti .container-special .popup-noti__content .btn-close {
   position: absolute;
   top: 1.2rem;
@@ -944,6 +956,16 @@ body {
   padding-top: 10rem;
   gap: 6rem;
 }
+@media (max-width: 768px) {
+  .main .contactForm .container {
+    gap: 3.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .contactForm .container {
+    padding-top: 6rem;
+  }
+}
 .main .contactForm .container .contactForm__header {
   width: 100%;
   display: flex;
@@ -1007,6 +1029,7 @@ body {
   line-height: 2.4rem;
 }
 .main .contactForm .container .contactForm__form .contactForm__group.message textarea {
+  padding: 1.1rem 1.7rem;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
@@ -1040,7 +1063,7 @@ body {
 .main .contactForm .container .contactForm__form .btn-contactForm:hover {
   transform: scale(1.02);
 }
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .main .contactForm .container .contactForm__form .btn-contactForm {
     width: 100%;
   }
@@ -1053,6 +1076,11 @@ body {
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 768px) {
+  .main .contactForm .container .contactForm__form .contactForm__note {
+    margin-bottom: 6.2rem;
+  }
 }
 .main .inspiration {
   width: 100%;
@@ -1692,10 +1720,11 @@ body {
 .footer .container .footer__content .footer__form .btn-submit {
   padding: 1.1rem;
   position: absolute;
-  background-color: var(--bg-body);
+  background-color: var(--bg-btn);
   border: 0px solid var(--bg-body);
   top: 0;
   right: 0;
+  cursor: pointer;
   transform: translate(0%, 60%);
 }
 .footer .container .footer__social-list {

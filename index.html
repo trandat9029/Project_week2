@@ -21,6 +21,11 @@
     <!-- library slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
     
+    <!-- library AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- JS AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -47,7 +52,7 @@
     <!-- main -->
     <main class="main">
         <!-- popup -->
-        <section class="popup-sales popup--hidden">
+        <section class="popup-sales popup--hidden" >
             <div class="container-special">
                 <div class="popup-sales__content">
                     <div class="popup-sales__thumbnail">
@@ -86,7 +91,7 @@
         </section>
 
         <!-- hero-banner -->
-        <section class="hero-banner">
+        <section class="hero-banner" >
             <div class="container-special">
                 <!-- background -->
                 <div class="hero-banner__background">
@@ -105,7 +110,7 @@
         </section>
 
         <!-- tabs -->
-        <section class="tabs">
+        <section class="tabs" >
             <div class="container">
                 <!-- tabs header -->
                 <div class="tabs__header">
@@ -124,7 +129,7 @@
                         <!-- block on -->
                         <div class="tabs__product-include">
                             <!-- item 1 -->
-                            <div class="tabs__product-item">
+                            <div class="tabs__product-item" data-aos="fade-up" data-aos-duration="3000">
                                 <div class="tabs__product-thumbnail">
                                     <img src="src/assets/img/tabs-wrap1.png" alt="product">
                                 </div>
@@ -137,7 +142,7 @@
                             <!-- group item 2 & item 3 -->
                             <div class="tabs__product-group">
                                 <!-- item 2 -->
-                                <div class="tabs__product-item">
+                                <div class="tabs__product-item" data-aos="fade-up" data-aos-duration="3000">
                                     <div class="tabs__product-thumbnail">
                                         <img src="src/assets/img/tabs-wrap2.png" alt="product">
                                     </div>
@@ -153,7 +158,7 @@
                                 </div>
 
                                 <!-- item 3 -->
-                                <div class="tabs__product-item">
+                                <div class="tabs__product-item" data-aos="fade-up" data-aos-duration="3000"> 
                                     <div class="tabs__product-thumbnail">
                                         <img src="src/assets/img/tabs-wrap3.png" alt="product">
                                     </div>
@@ -170,7 +175,7 @@
                             <!-- group item 4 & item 5 -->
                             <div class="tabs__product-group">
                                 <!-- item 4 -->
-                                <div class="tabs__product-item">
+                                <div class="tabs__product-item" data-aos="fade-up" data-aos-duration="3000">
                                     <div class="tabs__product-thumbnail">
                                         <img src="src/assets/img/tabs-wrap4.png" alt="product">
                                     </div>
@@ -188,7 +193,7 @@
                                 </div>
 
                                 <!-- item 5 -->
-                                <div class="tabs__product-item">
+                                <div class="tabs__product-item" data-aos="fade-up" data-aos-duration="3000">
                                     <div class="tabs__product-thumbnail">
                                         <img src="src/assets/img/tabs-wrap5.png" alt="product">
                                     </div>
@@ -200,7 +205,7 @@
                                 </div>
                             </div>
                             <!-- item 6 -->
-                            <div class="tabs__product-item">
+                            <div class="tabs__product-item" data-aos="fade-up" >
                                 <div class="tabs__product-thumbnail">
                                     <img src="src/assets/img/tabs-wrap6.png" alt="product">
                                 </div>
@@ -227,7 +232,7 @@
                 <div class="slider__track splide__track">
                     <ul class="slider__card splide__list">
                     <!-- item 1 -->
-                        <li class="slider__card-item splide__slide"> 
+                        <li class="slider__card-item splide__slide"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 
                             <div class="card__thumbnail">
                                 <img src="src/assets/img/slider1.png" alt="slider">
                             </div>
@@ -238,7 +243,7 @@
                             </div>
                         </li>
                         <!-- item 2 -->
-                        <li class="slider__card-item splide__slide"> 
+                        <li class="slider__card-item splide__slide" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 
                             <div class="card__thumbnail">
                                 <img src="src/assets/img/slider2.png" alt="slider">
                             </div>
@@ -249,7 +254,7 @@
                             </div>
                         </li>
                         <!-- item 3 -->
-                        <li class="slider__card-item splide__slide"> 
+                        <li class="slider__card-item splide__slide" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 
                             <div class="card__thumbnail">
                                 <img src="src/assets/img/slider3.png" alt="slider">
                             </div>
@@ -264,7 +269,7 @@
                             </div>
                         </li>
                         <!-- item 4 -->
-                        <li class="slider__card-item splide__slide"> 
+                        <li class="slider__card-item splide__slide" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 
                             <div class="card__thumbnail">
                                 <img src="src/assets/img/slider4.png" alt="slider">                            </div>
                             <div class="card__content">
@@ -279,7 +284,7 @@
         </section>
 
         <!-- scrolling -->
-        <section class="scrolling">
+        <section class="scrolling" >
             <div class="container-special">
                 <div class="scrolling__promotion">
                     <div class="scrolling__content">
@@ -393,15 +398,15 @@
         </section>
 
         <!-- salebook -->
-        <section class="salebook">
+        <section class="salebook" >
             <div class="container">
                 <ul class="salebook__list">
                     <!-- item 1 -->
-                    <li class="salebook__item">
+                    <li class="salebook__item" data-aos="fade-up" data-aos-anchor-placement="top-center">
                         <img src="src/assets/img/salebook1.png" alt="salebook">
                     </li>
                     <!-- item 2 -->
-                    <li class="salebook__item">
+                    <li class="salebook__item" data-aos="fade-up" data-aos-anchor-placement="top-center">
                         <div class="salebook__slogan">
                             <p class="salebook__title">Season Sale Collections</p>
                             <div class="salebook__infos">
@@ -411,7 +416,7 @@
                         </div>
                     </li>
                     <!-- item 3 -->
-                    <li class="salebook__item">
+                    <li class="salebook__item" data-aos="fade-up" data-aos-anchor-placement="top-center">
                         <img src="src/assets/img/salebook3.png" alt="salebook">
                     </li>
                 </ul>
@@ -470,7 +475,7 @@
                 <!-- content -->
                 <ul class="inspiration__list">
                     <!-- item 1 -->
-                    <li class="inspiration__item">
+                    <li class="inspiration__item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="inspiration__thumbnail">
                             <img src="src/assets/img/inspiration1.png" alt="inspiration">
                         </div>
@@ -480,7 +485,7 @@
                         </div>
                     </li>
                     <!-- item 2 -->
-                    <li class="inspiration__item">
+                    <li class="inspiration__item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="inspiration__thumbnail">
                             <img src="src/assets/img/inspiration2.png" alt="inspiration">
                         </div>
@@ -490,7 +495,7 @@
                         </div>
                     </li>
                     <!-- item 3 -->
-                    <li class="inspiration__item">
+                    <li class="inspiration__item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="inspiration__thumbnail">
                             <img src="src/assets/img/inspiration3.png" alt="inspiration">
                         </div>
@@ -500,7 +505,7 @@
                         </div>
                     </li>
                     <!-- item 4 -->
-                    <li class="inspiration__item">
+                    <li class="inspiration__item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="inspiration__thumbnail">
                             <img src="src/assets/img/inspiration4.png" alt="inspiration">
                         </div>
@@ -596,7 +601,7 @@
             <div class="container">
                 <ul class="services__list">
                     <!-- item 1 -->
-                    <li class="services__item">
+                    <li class="services__item" data-aos="zoom-in">
                         <div class="services__item-icon">
                             <img src="src/assets/img/services-icon1.png" alt="services-icon">
                         </div>
@@ -606,7 +611,7 @@
                         </div>
                     </li>
                     <!-- item 2 -->
-                    <li class="services__item">
+                    <li class="services__item" data-aos="zoom-in">
                         <div class="services__item-icon">
                             <img src="src/assets/img/services-icon2.png" alt="services-icon">
                         </div>
@@ -616,7 +621,7 @@
                         </div>
                     </li>
                     <!-- item 3 -->
-                    <li class="services__item">
+                    <li class="services__item" data-aos="zoom-in">
                         <div class="services__item-icon">
                             <img src="src/assets/img/services-icon3.png" alt="services-icon">
                         </div>
@@ -626,7 +631,7 @@
                         </div>
                     </li>
                     <!-- item 4 -->
-                    <li class="services__item">
+                    <li class="services__item" data-aos="zoom-in">
                         <div class="services__item-icon">
                             <img src="src/assets/img/services-icon4.png" alt="services-icon">
                         </div>
@@ -643,14 +648,14 @@
         <section class="contact">
             <div class="container">
                 <!-- images left/on -->
-                <div class="contact__img-list1">
-                <div class="contact__image contact__image1">
+                <div class="contact__img-list1" >
+                <div class="contact__image contact__image1" data-aos="fade-right" >
                     <img src="src/assets/img/contact1.png" alt="contact" />
                 </div>
-                <div class="contact__image contact__image2">
+                <div class="contact__image contact__image2" data-aos="fade-down-right">
                     <img src="src/assets/img/contact2.png" alt="contact" />
                 </div>
-                <div class="contact__image contact__image3">
+                <div class="contact__image contact__image3" data-aos="fade-up-right">
                     <img src="src/assets/img/contact3.png" alt="contact" />
                 </div>
                 </div>
@@ -677,10 +682,10 @@
 
                 <!-- images right/below -->
                 <div class="contact__img-list2">
-                <div class="contact__image contact__image4">
+                <div class="contact__image contact__image4" data-aos="fade-up-left">
                     <img src="src/assets/img/contact4.png" alt="contact" />
                 </div>
-                <div class="contact__image contact__image5">
+                <div class="contact__image contact__image5" data-aos="fade-left">
                     <img src="src/assets/img/contact5.png" alt="contact" />
                 </div>
                 </div>
@@ -764,5 +769,9 @@
 
     <!-- slider -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdX6nwrAAAAAOJ_dZAIB-0HfBdYe6uB7y3IF82z"></script>
+
 </body>
 </html>

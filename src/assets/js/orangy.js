@@ -171,3 +171,5 @@ document.querySelector(".btn-ignore").addEventListener("click", function () {
 
 
 
+AOS.init();
+

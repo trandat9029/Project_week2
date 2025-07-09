@@ -132,18 +132,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // cookie bar
-//display cookie-bar
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     const cookieBar = document.querySelector(".cookie-bar");
     const cookieAccepted = localStorage.getItem("cookieConsent");
 
-    if(!cookieAccepted){
-        cookieBar.style.display = "block";
+    // Kiểm tra nếu đã accept và chưa hết hạn
+    if (cookieAccepted) {
+        const expireDate = new Date(cookieAccepted);
+        const now = new Date();
+
+        if (now < expireDate) {
+            cookieBar.style.display = "none"; // đã accept và chưa hết hạn
+            return;
+        } else {
+            // nếu hết hạn thì xóa khỏi localStorage
+            localStorage.removeItem("cookieConsent");
+        }
     }
+
+    // Nếu chưa accept hoặc hết hạn
+    cookieBar.style.display = "block";
 });
 
-// accept
-document.querySelector(".btn-accept").addEventListener("click", function() {
+// Khi người dùng Accept
+document.querySelector(".btn-accept").addEventListener("click", function () {
     const expireDate = new Date();
     expireDate.setMonth(expireDate.getMonth() + 6); // 6 tháng
 
@@ -151,11 +163,11 @@ document.querySelector(".btn-accept").addEventListener("click", function() {
     document.querySelector(".cookie-bar").style.display = "none";
 });
 
-
-// ignore
-document.querySelector(".btn-ignore").addEventListener("click", function() {
+// Khi người dùng Ignore
+document.querySelector(".btn-ignore").addEventListener("click", function () {
     // Không lưu vào localStorage
     document.querySelector(".cookie-bar").style.display = "none";
 });
+
 
 

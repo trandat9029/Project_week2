@@ -1,0 +1,95 @@
+// sections/_faq.scss
+.faq {
+    width: 100%;
+    .container {
+        padding-bottom: 10rem;
+        color: var(--color-text);
+
+        .faq__header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 6rem;
+
+            .faq__heading {
+                font-family: var(--text-heading);
+                font-size: 3.6rem;
+                line-height: 4.8rem;
+                span { @include mobileS { margin-left: 2rem; } }
+                @include mobile { font-size: 2.8rem; line-height: 3.8rem; }
+                @include mobileS { width: 53%; }
+            }
+        }
+
+        .faq__content-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .faq__content-item {
+                width: 100%;
+                padding: 2rem 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                .faq__question {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid var(--border-faq-line);
+                    padding-bottom: 2rem;
+
+                    .faq__question-text {
+                        font-family: var(--text-heading);
+                        font-size: 2.6rem;
+                        line-height: 3.8rem;
+                        @include mobile { font-size: 2rem; line-height: 3rem; }
+                    }
+
+                    .faq__question-icon {
+                        width: 2rem;
+                        height: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            display: block;
+                            width: 1.5rem;
+                            height: 0.2rem;
+                            border-radius: 2rem;
+                            background-color: var(--color-plus);
+                            &:after {
+                                content: "";
+                                transform: rotate(90deg);
+                                display: block;
+                                width: 1.5rem;
+                                height: 0.15rem;
+                                border-radius: 2rem;
+                                background-color: var(--color-plus);
+                                transition: transform 0.5s ease;
+                            }
+                        }
+                    }
+                }
+
+                .faq__answer {
+                    height: 0;
+                    overflow: hidden;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    transition: height 0.5s ease;
+                }
+
+                &.--active {
+                    .faq__question {
+                        border-bottom: 1px solid var(--border-faq-line-active);
+                        .faq__question-icon span::after { transform: rotate(0deg); transition: transform 0.5s ease; }
+                    }
+                    .faq__answer { height: auto; }
+                }
+            }
+        }
+    }
+}

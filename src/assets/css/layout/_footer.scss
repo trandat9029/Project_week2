@@ -1,0 +1,104 @@
+// layout/_footer.scss
+.footer {
+    width: 100%;
+    background-color: var(--bg-header);
+    color: var(--color-title);
+    font-weight: 400;
+
+    .container {
+        width: 100%;
+        padding: 0;
+
+        .footer__content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5rem;
+            
+            @include mobileS { align-items: start; padding: 3rem 1.5rem 0 1.5rem; width: auto; }
+
+            .footer__sale {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+
+                @include mobileS { align-items: start; }
+
+                .footer__title {
+                    font-family: var(--text-heading);
+                    font-size: 3.2rem;
+                    line-height: 4.2rem;
+
+                    @include mobile { font-size: 2.4rem; line-height: 3.4rem; }
+                }
+                .footer__desc {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+            }
+            .footer__form {
+                transform: translate(0%, 10%);
+                width: 46.5rem;
+                position: relative;
+                padding-top: 1.6rem;
+
+                @include mobile { width: 36rem; transform: translate(0%, 0%); }
+                @include mobileS { width: 92%; transform: translate(0%, 0%); }
+
+                .input-email {
+                    font-family: "Poppins", sans-serif;
+                    box-sizing: border-box;
+                    width: 100%;
+                    font-size: 1.6rem;
+                    line-height: 100%;
+                    padding: 1.4rem 1.7rem;
+                    border: 0.1rem solid var(--border-input-email);
+                }
+
+                .btn-submit {
+                    padding: 1.1rem;
+                    position: absolute;
+                    background-color: var(--bg-btn);
+                    border: 0px solid var(--bg-body);
+                    top: 0;
+                    right: 0;
+                    cursor: pointer;
+                    transform: translate(0%, 60%);
+                }
+            }
+        }
+
+        .footer__social-list {
+            transform: translate(0%, 15%);
+            box-sizing: border-box;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.4rem;
+            margin-bottom: 1.8rem;
+                
+            @include mobileS { padding-left: 1.5rem; justify-content: start; }
+        }
+
+        .footer__copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            @include mobileS { padding-left: 1.5rem; justify-content: start; }
+
+            .footer__copyright-link {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+                a { color: var(--color-title); text-transform: uppercase; text-decoration: underline; }
+            }
+        }
+    }
+}

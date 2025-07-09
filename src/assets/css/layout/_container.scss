@@ -1,0 +1,14 @@
+// layout/_container.scss
+.container {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    
+    @include desktopS { box-sizing: border-box; }
+}
+

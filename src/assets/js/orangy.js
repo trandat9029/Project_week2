@@ -102,33 +102,34 @@ function getCookie(name) {
 
 /*close popup */ 
 function closePopup() {
-  const popup = document.querySelector(".popup-sales");
-  popup.classList.add("popup--hidden");
-  setCookie("popupClosed", "true", 240)
+    const popup = document.querySelector(".popup-sales");
+    popup.classList.add("popup--hidden");
+    setCookie("popupClosed", "true", 240)
 }
 
 /* set display popup after 3 second */ 
 window.addEventListener("DOMContentLoaded", () => {
-  const popup = document.querySelector(".popup-sales");
+    const popup = document.querySelector(".popup-sales");
 
-  // Nếu chưa từng tắt popup
-  if (!getCookie("popupClosed")) {
-    const triggerPopup = () => {
-      setTimeout(() => {
-        popup.classList.remove("popup--hidden");
-      }, 3000);
+    // Nếu chưa từng tắt popup
+    if (!getCookie("popupClosed")) {
+        const triggerPopup = () => {
+        setTimeout(() => {
+            popup.classList.remove("popup--hidden");
+        }, 3000);
 
-      // Gỡ bỏ listener sau khi đã bắt đầu
-      window.removeEventListener("mousemove", triggerPopup);
-      window.removeEventListener("touchstart", triggerPopup);
-    };
+        // Gỡ bỏ listener sau khi đã bắt đầu
+        window.removeEventListener("mousemove", triggerPopup);
+        window.removeEventListener("touchstart", triggerPopup);
+        };
 
-    window.addEventListener("mousemove", triggerPopup);
-    window.addEventListener("touchstart", triggerPopup);
-  }
+        window.addEventListener("mousemove", triggerPopup);
+        window.addEventListener("touchstart", triggerPopup);
+    }
 
-  document.querySelector(".btn-close").addEventListener("click", closePopup);
+    document.querySelector(".btn-close").addEventListener("click", closePopup);
 });
+
 
 
 // cookie bar
@@ -170,6 +171,6 @@ document.querySelector(".btn-ignore").addEventListener("click", function () {
 });
 
 
-
+// library AOS
 AOS.init();
 

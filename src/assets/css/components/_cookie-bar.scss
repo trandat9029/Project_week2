@@ -1,0 +1,59 @@
+// components/_cookie-bar.scss
+.cookie-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-cookie-bar);
+
+    .container-special {
+        box-sizing: border-box;
+        font-weight: 400;
+        width: 100%;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+
+        @include mobile {
+            box-sizing: border-box;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .cookie-bar__content {
+            width: 100%;
+            .cookie-bar__title {
+                font-size: 2rem;
+                line-height: 5.6rem;
+                @include tablet { font-size: 1.6rem; line-height: 3.6rem; }
+                @include mobile { font-size: 1.4rem; line-height: 2.4rem; }
+            }
+        }
+
+        .cookie-bar__button {
+            display: flex;
+            gap: 2rem;
+            @include tablet { gap: 1rem; }
+            .btn-accept {
+                padding: 0.5rem 2rem;
+                background-color: var(--bg-btn-accept);
+                color: var(--color-title);
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                text-transform: uppercase;
+                @include tablet { padding: 0.5rem 1.4rem; font-size: 1.4rem; line-height: 3.2rem; }
+                @include mobile { padding: 0.5rem 1.2rem; font-size: 1.2rem; line-height: 2.4rem; }
+            }
+            .btn-ignore {
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                text-transform: uppercase;
+                @include tablet { padding: 0.5rem 1.4rem; font-size: 1.4rem; line-height: 3.2rem; }
+                @include mobile { padding: 0.5rem 1.2rem; font-size: 1.2rem; line-height: 2.4rem; }
+            }
+        }
+    }
+}

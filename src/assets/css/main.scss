@@ -1,0 +1,38 @@
+
+// main.scss
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/reset";
+@import "base/base";
+
+
+// Components
+@import "components/button";
+@import "components/cookie-bar";
+@import "components/popup-noti";
+@import "components/popup-sales";
+
+// Layout
+@import "layout/container";
+@import "layout/footer";
+@import "layout/header";
+
+// Page
+@import "pages/home";
+
+// Sections
+@import "sections/contact";
+@import "sections/contactForm";
+@import "sections/faq";
+@import "sections/hero-banner";
+@import "sections/inspiration";
+@import "sections/salebook";
+@import "sections/scrolling";
+@import "sections/services";
+@import "sections/single-banner";
+@import "sections/slider";
+@import "sections/tabs";

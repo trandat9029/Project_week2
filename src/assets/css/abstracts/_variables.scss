@@ -1,0 +1,41 @@
+// abstracts/_variables.scss
+:root {
+    // Font families
+    --text-heading: "Lora", sans-serif;
+
+    // Colors text
+    --color-desc: #00000060;
+    --color-text: #000;
+    --color-title: #fff;
+    --color-pice-new: #D63A2F;
+    --color-pice-old: #666666;
+    --color-scrolling: #b3aeae;
+    --color-input-email: #00000050;
+    --color-salebook-tablet: #F3F3F3;
+    --color-plus: #000;
+    --color-error: #fc2626;
+
+    //color background
+    --bg-body: #fff;
+    --bg-header: #000;
+    --bg-single-banner: #00000050;
+    --bg-selling-desc: #054E4A;
+    --bg-selling-title: #000;
+    --bg-sale: #A42003;
+    --bg-salebook: #6E331a;
+    --bg-contactForm: #F6F3EE;
+    --bg-contact: #F6F2EE;
+    --bg-popup-noti: #fff;
+    --bg-btn: #ffffff00;
+    --bg-btn-accept: #000;
+    --bg-cookie-bar: #ffffffc9;
+    --bg-btn-contactForm: #000;
+
+    // color border
+    --border-faq-line: #EDEDED;
+    --border-faq-line-active: #000;
+    --border-contact-link: #D1CECA;
+    --border-input-email: #F6F2EE;
+    --border-btn-close: #EDEDED;
+    --border-contactForm-input: #E6E6E6;
+}

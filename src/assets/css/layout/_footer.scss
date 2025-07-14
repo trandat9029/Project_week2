@@ -47,7 +47,7 @@
                 padding-top: 1.6rem;
 
                 @include mobile { width: 36rem; transform: translate(0%, 0%); }
-                @include mobileS { width: 92%; transform: translate(0%, 0%); }
+                @include mobileS { width: 100%; transform: translate(0%, 11%); }
 
                 .input-email {
                     font-family: "Poppins", sans-serif;
@@ -67,7 +67,11 @@
                     top: 0;
                     right: 0;
                     cursor: pointer;
-                    transform: translate(0%, 60%);
+                    transform: translate(-27%, 50%);
+
+                    i{
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }

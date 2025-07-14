@@ -10,7 +10,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding-bottom: 6rem;
+                padding-bottom: 4rem;
+
+                @include mobile {
+                    padding-bottom: 3rem;
+                }
 
                 .faq__heading{
                     font-family: var(--text-heading);
@@ -38,18 +42,66 @@
                 flex-direction: column;
                 gap: 2rem;
 
+                
+                .faq__content-item:first-child{
+                    .faq__answer{
+                        width: 48%;
+
+                        @include tablet{
+                            width: auto;
+                        }
+                    }
+                }
+                .faq__content-item:nth-child(2){
+                    transform: translate(0%, 0%);
+
+                    @include mobile{
+                        .faq__question-icon{
+                            transform: translate(6%, 105%) !important;
+                        }
+                    }
+                }
+                .faq__content-item:nth-child(n+3){
+                    transform: translate(0%, -15%);
+                }
+                .faq__content-item:nth-child(n+4){
+                    transform: translate(0%, -34%);
+
+                    @include mobile{
+                        transform: translate(0%, -22%);
+                        .faq__question-icon{
+                            transform: translate(6%, 100%) !important;
+                        }
+                    }
+                }
+                .faq__content-item:nth-child(n+5){
+                    transform: translate(0%, -50%);
+
+                    @include mobile{
+                        transform: translate(0%, -35%);
+                        .faq__question{
+                            .faq__question-text{
+                                width: 75%;
+                            }
+                            .faq__question-icon{
+                                transform: translate(6%, 100%) !important;
+                            }
+                        }
+                    }
+                }
+
                 .faq__content-item{
                     width: 100%;
-                    padding: 2rem 0;
                     display: flex;
                     flex-direction: column;
                     gap: 1.6rem;
 
                     .faq__question{
+                        padding: 2rem 0;
                         display: flex;
                         justify-content: space-between;
                         border-bottom: 1px solid var(--border-faq-line);
-                        padding-bottom: 2rem;
+                        padding-bottom: 1.9rem;
 
                         .faq__question-text{
                             font-family: var(--text-heading);
@@ -68,6 +120,7 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            transform: translate(0%, 32%);
 
                             span{
                                 display: block;

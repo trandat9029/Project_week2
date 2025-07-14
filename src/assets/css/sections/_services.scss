@@ -13,6 +13,43 @@
             @include tablet { grid-template-columns: 1fr 1fr; gap: 4rem; }
             @include mobileS { grid-template-columns: 1fr; gap: 2.4rem; }
 
+            .services__item:nth-child(2){
+                
+                @include mobile {
+                    transform: translate(0%, -6%);
+                    .services__content{
+
+                        .services__content-desc{
+                            transform: translate(0%, -6%);
+                        }
+                    }
+                }
+            }
+            .services__item:nth-child(3){
+                
+                @include mobile {
+                    transform: translate(0%, -14%);
+                    .services__content{
+
+                        .services__content-desc{
+                            transform: translate(0%, -6%);
+                        }
+                    }
+                }
+            }
+            .services__item:nth-child(4){
+                
+                @include mobile {
+                    transform: translate(0%, -22%);
+                    .services__content{
+
+                        .services__content-desc{
+                            transform: translate(0%, -6%);
+                        }
+                    }
+                }
+            }
+
             .services__item {
                 width: 100%;
                 font-weight: 400;
